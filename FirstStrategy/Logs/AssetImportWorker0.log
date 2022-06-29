@@ -15,7 +15,7 @@ K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-60508
+59446
 Successfully changed project path to: K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy
 K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,7 +47,7 @@ K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Refreshing native plugins compatible for Editor in 101.13 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 103.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.1f1 (3b70a0754835)
 [Subsystems] Discovering subsystems at path K:/Unity Editor/2021.3.1f1/Editor/Data/Resources/UnitySubsystems
@@ -63,49 +63,49 @@ Initialize mono
 Mono path[0] = 'K:/Unity Editor/2021.3.1f1/Editor/Data/Managed'
 Mono path[1] = 'K:/Unity Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'K:/Unity Editor/2021.3.1f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56944
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: K:/Unity Editor/2021.3.1f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: K:/Unity Editor/2021.3.1f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: K:/Unity Editor/2021.3.1f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.005160 seconds.
+Registered in 0.005650 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 111.93 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 104.17 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.899 seconds
+- Completed reload, in  0.868 seconds
 Domain Reload Profiling:
-	ReloadAssembly (900ms)
-		BeginReloadAssembly (102ms)
+	ReloadAssembly (869ms)
+		BeginReloadAssembly (94ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (655ms)
-			LoadAssemblies (101ms)
+		EndReloadAssembly (629ms)
+			LoadAssemblies (94ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (165ms)
+			SetupTypeCache (140ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (45ms)
-			SetupLoadedEditorAssemblies (384ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (385ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (72ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (112ms)
+				InitializePlatformSupportModulesInManaged (78ms)
+				SetLoadedEditorAssemblies (2ms)
+				RefreshPlugins (104ms)
 				BeforeProcessingInitializeOnLoad (2ms)
-				ProcessInitializeOnLoadAttributes (140ms)
-				ProcessInitializeOnLoadMethodAttributes (58ms)
+				ProcessInitializeOnLoadAttributes (139ms)
+				ProcessInitializeOnLoadMethodAttributes (60ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004019 seconds.
+Registered in 0.004735 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory is not a mono symbol file
@@ -113,33 +113,33 @@ Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn
 Native extension for WindowsStandalone target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.432 seconds
+- Completed reload, in  1.454 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1434ms)
-		BeginReloadAssembly (286ms)
+	ReloadAssembly (1455ms)
+		BeginReloadAssembly (239ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (8ms)
+			DisableScriptedObjects (9ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (163ms)
-		EndReloadAssembly (1004ms)
-			LoadAssemblies (118ms)
+			CreateAndSetChildDomain (127ms)
+		EndReloadAssembly (1070ms)
+			LoadAssemblies (111ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (357ms)
+			SetupTypeCache (367ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (68ms)
-			SetupLoadedEditorAssemblies (412ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (466ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (18ms)
 				SetLoadedEditorAssemblies (1ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (94ms)
-				ProcessInitializeOnLoadAttributes (262ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (308ms)
+				ProcessInitializeOnLoadMethodAttributes (31ms)
+				AfterProcessingInitializeOnLoad (4ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (8ms)
@@ -147,12 +147,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.08 seconds
-Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3225 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (112.0 KB). Loaded Objects now: 3687.
-Memory consumption went from 112.1 MB to 112.0 MB.
-Total: 3.636000 ms (FindLiveObjects: 0.328800 ms CreateObjectMapping: 0.156700 ms MarkObjects: 2.988300 ms  DeleteObjects: 0.160500 ms)
+Unloading 23 unused Assets / (112.5 KB). Loaded Objects now: 3687.
+Memory consumption went from 112.2 MB to 112.1 MB.
+Total: 4.020000 ms (FindLiveObjects: 0.324500 ms CreateObjectMapping: 0.168300 ms MarkObjects: 3.386000 ms  DeleteObjects: 0.139000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -166,19 +166,375 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 6976.266007 seconds.
-  path: Assets/Scenes/Main.unity
-  artifactKey: Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Main.unity using Guid(9fc0d4010bbf28b4594072e72b8655ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e14c6db9487ef92a94dc58885498e97d') in 0.011601 seconds 
+  Time since last request: 9452.725561 seconds.
+  path: Assets/Meshtint Free Knight/FBX/Sword.FBX
+  artifactKey: Guid(17e462df654aa664683c1e9f5eed62bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/FBX/Sword.FBX using Guid(17e462df654aa664683c1e9f5eed62bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '433fdddabb7af10a158039ae2e62f821') in 0.215080 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 18.166520 seconds.
-  path: Assets/PBR_Sand_Materials_Free/Material/Floor.mat
-  artifactKey: Guid(01300281473eb4b14b98441fd73b1888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PBR_Sand_Materials_Free/Material/Floor.mat using Guid(01300281473eb4b14b98441fd73b1888) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f3c9e448fc041fa852d3de62f83e4857') in 0.401950 seconds 
+  Time since last request: 0.000039 seconds.
+  path: Assets/Meshtint Free Knight/FBX/Shield.FBX
+  artifactKey: Guid(8f414378dccad1146bbee06522d6d242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/FBX/Shield.FBX using Guid(8f414378dccad1146bbee06522d6d242) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7736165db2623443be2da2f029d6c3df') in 0.022895 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 135.319669 seconds.
-  path: Assets/PBR_Sand_Materials_Free/Material/Sand.mat
-  artifactKey: Guid(8b5da5c71f8ee4b87aa2bef188299409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/PBR_Sand_Materials_Free/Material/Sand.mat using Guid(8b5da5c71f8ee4b87aa2bef188299409) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ace848425c3239a3365004d107a554d3') in 0.320906 seconds 
+  Time since last request: 3.729726 seconds.
+  path: Assets/Meshtint Free Knight/Post Processing Profile/PPP.asset
+  artifactKey: Guid(4989ef6ec451fd54d94a6b451ce1df4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Post Processing Profile/PPP.asset using Guid(4989ef6ec451fd54d94a6b451ce1df4f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1bffa8460a3de91ea6ba7683a72be8f8') in 0.012965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.695174 seconds.
+  path: Assets/Meshtint Free Knight/Prefabs/Meshtint Free Knight.prefab
+  artifactKey: Guid(5b5b1958cdf88ce49989e326859b9572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Prefabs/Meshtint Free Knight.prefab using Guid(5b5b1958cdf88ce49989e326859b9572) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34a05c61e7f69bc4ea9eaa2a46fe7a79') in 0.050871 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.505646 seconds.
+  path: Assets/Meshtint Free Knight/Textures/Grid.psd
+  artifactKey: Guid(6f38cf081e548024eadabcdb13ca5fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Textures/Grid.psd using Guid(6f38cf081e548024eadabcdb13ca5fdd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f2bf7383a28e230ff604a5c1a4b2a209') in 0.026887 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.623344 seconds.
+  path: Assets/Meshtint Free Knight/UI/Important!!! Read me.prefab
+  artifactKey: Guid(2eb6d9a882a95a54f97244f20bddea01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/UI/Important!!! Read me.prefab using Guid(2eb6d9a882a95a54f97244f20bddea01) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd2edb3d8815e5d9dff01dbcc06d82c6f') in 0.014778 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 80.727813 seconds.
+  path: Assets/Meshtint Free Knight/Materials/Blue.mat
+  artifactKey: Guid(c0c7e3518cd06bd499fe69cdba52c9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Materials/Blue.mat using Guid(c0c7e3518cd06bd499fe69cdba52c9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2a20b86e65bac7332c839cb1f22a15fd') in 0.046745 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 25.841647 seconds.
+  path: Assets/Meshtint Free Knight/Controllers/Meshtint Free Knight.controller
+  artifactKey: Guid(d05c65343761305459dd4f72d1f51309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Controllers/Meshtint Free Knight.controller using Guid(d05c65343761305459dd4f72d1f51309) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '756fc82eaac89e13558b076e2aa3a4de') in 0.008543 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003662 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.423 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1424ms)
+		BeginReloadAssembly (161ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (39ms)
+		EndReloadAssembly (1147ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (390ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (79ms)
+			SetupLoadedEditorAssemblies (500ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (41ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (100ms)
+				ProcessInitializeOnLoadAttributes (311ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.04 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (79.3 KB). Loaded Objects now: 3737.
+Memory consumption went from 129.5 MB to 129.5 MB.
+Total: 3.870400 ms (FindLiveObjects: 0.288100 ms CreateObjectMapping: 0.139800 ms MarkObjects: 3.333200 ms  DeleteObjects: 0.107600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 119.172011 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/Meshtint Free Knight Tutorial.pdf
+  artifactKey: Guid(661e3dc0732785243a2ff779154b1166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/Meshtint Free Knight Tutorial.pdf using Guid(661e3dc0732785243a2ff779154b1166) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd964d82a126ab44f0aab8a99055e6d64') in 0.031283 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.322090 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG
+  artifactKey: Guid(b63384b497e3ca84c9710a9d95dcf618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG using Guid(b63384b497e3ca84c9710a9d95dcf618) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '913a4db0d847a6e0dbf92d02a0784760') in 0.007971 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.093653 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (0).png
+  artifactKey: Guid(043f7c7b9e6394041bdd266a4fe9dada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (0).png using Guid(043f7c7b9e6394041bdd266a4fe9dada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cd6483644ecc3454ff41c85d0186a195') in 0.062464 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (5).png
+  artifactKey: Guid(6bde150c1d1af75418fbf085c3ca4dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (5).png using Guid(6bde150c1d1af75418fbf085c3ca4dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0939e75fc5c3bf3899eddf44f88f8b0') in 0.029655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (3).png
+  artifactKey: Guid(ff50e90dd9c89a64481f89266b102439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (3).png using Guid(ff50e90dd9c89a64481f89266b102439) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1d6cc854368de7325c5c260e36c1c5') in 0.016160 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (4).png
+  artifactKey: Guid(7e6ed42c4eedc6e448e3bd11e530897a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (4).png using Guid(7e6ed42c4eedc6e448e3bd11e530897a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '018ce4fb2a6a50ad64c250ed39aba5e9') in 0.017948 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (11).png
+  artifactKey: Guid(7d67e37f515d7604a9d5c161e9d09800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (11).png using Guid(7d67e37f515d7604a9d5c161e9d09800) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '54dfd32f4977562a3d6a446c77770419') in 0.016123 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (12).png
+  artifactKey: Guid(b2b5c49bdeda6ec4693bb000565ebcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (12).png using Guid(b2b5c49bdeda6ec4693bb000565ebcad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b481d5461299c0e809cad2afafbc8d') in 0.016973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (2).png
+  artifactKey: Guid(1f8399b660a023b45a952a0d318c04a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (2).png using Guid(1f8399b660a023b45a952a0d318c04a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5ae2b803501445511c10bd67abbe39a') in 0.017565 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (8).png
+  artifactKey: Guid(3640ca5069049954e9fde48aafbbebc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Tutorials/PNG/Meshtint Free Knight Tutorial (8).png using Guid(3640ca5069049954e9fde48aafbbebc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487f6c88564b9b539cf6a4c430e71423') in 0.019734 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005104 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.06 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.471 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1472ms)
+		BeginReloadAssembly (163ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (7ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1174ms)
+			LoadAssemblies (112ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (403ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (75ms)
+			SetupLoadedEditorAssemblies (502ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (33ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (98ms)
+				ProcessInitializeOnLoadAttributes (325ms)
+				ProcessInitializeOnLoadMethodAttributes (37ms)
+				AfterProcessingInitializeOnLoad (6ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (79.4 KB). Loaded Objects now: 3741.
+Memory consumption went from 129.6 MB to 129.5 MB.
+Total: 4.075100 ms (FindLiveObjects: 0.290900 ms CreateObjectMapping: 0.203800 ms MarkObjects: 3.464600 ms  DeleteObjects: 0.114000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003889 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.444 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1445ms)
+		BeginReloadAssembly (157ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (8ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (1158ms)
+			LoadAssemblies (113ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (404ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (74ms)
+			SetupLoadedEditorAssemblies (483ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (36ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (96ms)
+				ProcessInitializeOnLoadAttributes (307ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.83 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (79.2 KB). Loaded Objects now: 3744.
+Memory consumption went from 129.6 MB to 129.5 MB.
+Total: 3.768700 ms (FindLiveObjects: 0.296400 ms CreateObjectMapping: 0.141300 ms MarkObjects: 3.208700 ms  DeleteObjects: 0.120400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003960 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file LoadedFromMemory doesn't match image K:\Unity Projects\strategy\Turn-based-strategy\FirstStrategy\Library\PackageCache\com.unity.visualscripting@1.7.6\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for Android target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.394 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1395ms)
+		BeginReloadAssembly (158ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (9ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (43ms)
+		EndReloadAssembly (1119ms)
+			LoadAssemblies (107ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (385ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (73ms)
+			SetupLoadedEditorAssemblies (471ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (35ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (296ms)
+				ProcessInitializeOnLoadMethodAttributes (36ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3220 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 16 unused Assets / (79.3 KB). Loaded Objects now: 3747.
+Memory consumption went from 129.6 MB to 129.5 MB.
+Total: 5.779300 ms (FindLiveObjects: 0.852400 ms CreateObjectMapping: 0.329400 ms MarkObjects: 4.471800 ms  DeleteObjects: 0.123500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 1011.418679 seconds.
+  path: Assets/Meshtint Free Knight/Animations/Standing Melee Attack Horizontal.fbx
+  artifactKey: Guid(fffd8e8319cc9ca4196629761fe54633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Animations/Standing Melee Attack Horizontal.fbx using Guid(fffd8e8319cc9ca4196629761fe54633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2ec58fe21993035fd4c1b26f27d26cda') in 0.204708 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 24.890156 seconds.
+  path: Assets/Meshtint Free Knight/Animations/Standing Melee Attack Horizontal.fbx
+  artifactKey: Guid(fffd8e8319cc9ca4196629761fe54633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Animations/Standing Melee Attack Horizontal.fbx using Guid(fffd8e8319cc9ca4196629761fe54633) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd956fb5f67ec8053ce4c50dea8e783ac') in 0.062655 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 62.447998 seconds.
+  path: Assets/Meshtint Free Knight/Controllers
+  artifactKey: Guid(e4487f2d525a4334f9dcdfa6f73f6be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Controllers using Guid(e4487f2d525a4334f9dcdfa6f73f6be7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '302b482a8a1a32c813895366f687632b') in 0.007520 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.511792 seconds.
+  path: Assets/Meshtint Free Knight/Controllers/New Animator Controller.controller
+  artifactKey: Guid(9fe5e147fd072344dae563c322b7580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Controllers/New Animator Controller.controller using Guid(9fe5e147fd072344dae563c322b7580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83500fd5863905033cde7e200fdb1ebf') in 0.007549 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 8.505557 seconds.
+  path: Assets/Meshtint Free Knight/Controllers/Attack.controller
+  artifactKey: Guid(9fe5e147fd072344dae563c322b7580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Meshtint Free Knight/Controllers/Attack.controller using Guid(9fe5e147fd072344dae563c322b7580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60da10d896ca44ed0aaa2368e6f76a41') in 0.006554 seconds 
