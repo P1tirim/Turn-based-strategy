@@ -7,8 +7,8 @@ public class Cells : MonoBehaviour
     public int moveSpeed = 1;
     public GameObject particle;
 
-    int currentPositionX = 0;
-    int currentPositionY = 2;
+    int currentPositionX = 2;
+    int currentPositionY = 4;
     GameObject[,] cells = new GameObject[5, 5];
     List<GameObject> listParticles = new List<GameObject>();
     GameObject lastObj;
@@ -24,27 +24,30 @@ public class Cells : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //changes in the color of a cell when hovering over it with the cursor
+        ChangeColor();
 
-        RaycastHit hit;
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if (Physics.Raycast(ray ,out hit))
+        if (Input.GetMouseButtonDown(0))
         {
-            if(hit.transform.gameObject != lastObj && lastObj != null)
-            {
-                var main = lastObj.GetComponent<ParticleSystem>().main;
-                main.startColor = Color.blue;
-            }
-            if (hit.transform.gameObject.tag == "Particle")
-            {
-                var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
-                main.startColor = Color.green;
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-                lastObj = hit.transform.gameObject;
-            }
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Particle")
+                {
+                    string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+                    currentPositionX = int.Parse(xy[0]);
+                    currentPositionY = int.Parse(xy[1]);
 
+                    for(int i = 0; i < listParticles.Count; i++)
+                    {
+                        Destroy(listParticles[i]);
+                    }
+                    SpawnParticle();
+                    
+                }
+            }
         }
-        
     }
 
     //Put cells in array for further use
@@ -78,12 +81,35 @@ public class Cells : MonoBehaviour
                     vector.y = cell.transform.position.y;
                     vector.z = cell.transform.position.z;
 
-                    GameObject newParticle = Instantiate(particle, vector, Quaternion.Euler(-90, 0, 0));
+                    GameObject newParticle = Instantiate(particle, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                     listParticles.Add(newParticle as GameObject);
                 }
             }
         }
     }
+ 
+    //changes in the color of a cell when hovering over it with the cursor
+    void ChangeColor()
+    {
+        RaycastHit hit;
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        if (Physics.Raycast(ray, out hit))
+        {
+            if (hit.transform.gameObject != lastObj && lastObj != null)
+            {
+                var main = lastObj.GetComponent<ParticleSystem>().main;
+                main.startColor = Color.blue;
+            }
+            if (hit.transform.gameObject.tag == "Particle")
+            {
+                var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
+                main.startColor = Color.green;
 
-    
+                lastObj = hit.transform.gameObject;
+            }
+
+        }
+    }
+
+
 }
