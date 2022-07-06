@@ -6907,7 +6907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1
-  particle: {fileID: 7790366347254455987, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
+  particleMove: {fileID: 7790366347254455987, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
+  particleEnemy: {fileID: 5688853748454798460, guid: 2d13eb2cb7a07e44b9bd60bd5cc1b35d, type: 3}
 --- !u!1 &1417992724
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,13 +13,14 @@ public static class Global
 public class Cells : MonoBehaviour
 {
     public int moveSpeed = 1;
-    public GameObject particle;
+    public GameObject particleMove;
+    public GameObject particleEnemy;
 
     GameObject[,] cells = new GameObject[5, 5];
     List<GameObject> listParticles = new List<GameObject>();
     List<GameObject> listPositionEnemy = new List<GameObject>();
     GameObject lastObj;
-
+    GameObject newParticle;
 
     // Start is called before the first frame update
     void Start()
@@ -63,16 +64,23 @@ public class Cells : MonoBehaviour
             for (int j = 0; j < 5; j++)
             {
                 if (Global.currentPositionX == i && Global.currentPositionY == j) continue;
-                if (listPositionEnemy.Contains(cells[i, j])) continue;
                 if((Mathf.Abs(Global.currentPositionX-i) <= moveSpeed && Mathf.Abs(Global.currentPositionY-j) == 0) || (Mathf.Abs(Global.currentPositionX - i) == 0 && Mathf.Abs(Global.currentPositionY - j) <= moveSpeed))
                 {
                     GameObject cell = cells[i, j];
                     Vector3 vector;
-                    vector.x = cell.transform.position.x + 0.16f;
+                    vector.x = cell.transform.position.x + 0.18f;
                     vector.y = cell.transform.position.y;
                     vector.z = cell.transform.position.z;
-
-                    GameObject newParticle = Instantiate(particle, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                    if (listPositionEnemy.Contains(cells[i, j]))
+                    {
+                       newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                    }
+                    else
+                    {
+                       newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                        
+                    }
+                    
                     listParticles.Add(newParticle as GameObject);
                 }
             }
@@ -89,7 +97,14 @@ public class Cells : MonoBehaviour
             if (hit.transform.gameObject != lastObj && lastObj != null)
             {
                 var main = lastObj.GetComponent<ParticleSystem>().main;
-                main.startColor = Color.blue;
+                if(lastObj.tag == "Particle")
+                {
+                    main.startColor = Color.blue;
+                }else if(lastObj.tag == "ParticleEnemy")
+                {
+                    main.startColor = Color.yellow;
+                }
+                
             }
             if (hit.transform.gameObject.tag == "Particle")
             {
@@ -98,7 +113,13 @@ public class Cells : MonoBehaviour
 
                 lastObj = hit.transform.gameObject;
             }
+            if(hit.transform.gameObject.tag == "ParticleEnemy")
+            {
+                var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
+                main.startColor = Color.red;
 
+                lastObj = hit.transform.gameObject;
+            }
         }
     }
 

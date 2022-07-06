@@ -37,7 +37,18 @@ public class Character : MonoBehaviour
         //Move character
         if (Input.GetMouseButtonDown(0))
         {
-            Move();
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Particle")
+                {
+                    Move();
+                }else if(hit.transform.gameObject.tag == "ParticleEnemy")
+                {
+                    Attack();
+                }
+            }
         }
 
         //Stop walking
@@ -58,12 +69,7 @@ public class Character : MonoBehaviour
     //Move and Turn
     void Move()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        if (Physics.Raycast(ray, out hit))
-        {
-            if (hit.transform.gameObject.tag == "Particle")
-            {
+        
                 DefinitionSide();
                 string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
 
@@ -160,8 +166,8 @@ public class Character : MonoBehaviour
                 animator.SetTrigger("Walk");
                 elapsedTime = 0.0f;
             }
-        }
-    }
+        
+    
 
     //Defination side of the world
     void DefinitionSide()
@@ -259,5 +265,10 @@ public class Character : MonoBehaviour
         vector.z = hit.transform.position.z;
 
         transform.position = vector;
+    }
+
+    void Attack()
+    {
+        animator.SetTrigger("Attack");
     }
 }
