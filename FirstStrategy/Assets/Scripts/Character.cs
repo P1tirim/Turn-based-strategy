@@ -5,10 +5,8 @@ using UnityEngine;
 public class Character : MonoBehaviour
 {
     float elapsedTime = 0.0f;
-    Vector3 cell;
     public GameObject cells;
     Cells linkCells;
-    bool first = true;
     Animator animator;
 
     public GameObject nord;
@@ -260,7 +258,6 @@ public class Character : MonoBehaviour
         vector.y = 0;
         vector.z = hit.transform.position.z;
 
-        Debug.Log(vector);
         transform.position = vector;
     }
 }

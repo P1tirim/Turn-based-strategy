@@ -6,6 +6,9 @@ public static class Global
 {
    public static int currentPositionX = 2;
    public static int currentPositionY = 4;
+
+   public static int currentPositionEnemyX = 2;
+   public static int currentPositionEnemyY = 2;
 }
 public class Cells : MonoBehaviour
 {
@@ -14,6 +17,7 @@ public class Cells : MonoBehaviour
 
     GameObject[,] cells = new GameObject[5, 5];
     List<GameObject> listParticles = new List<GameObject>();
+    List<GameObject> listPositionEnemy = new List<GameObject>();
     GameObject lastObj;
 
 
@@ -22,6 +26,8 @@ public class Cells : MonoBehaviour
     {
         CellsInArray();
         SpawnParticle();
+        listPositionEnemy.Add(cells[Global.currentPositionEnemyX, Global.currentPositionEnemyY]);
+
     }
 
     // Update is called once per frame
@@ -57,6 +63,7 @@ public class Cells : MonoBehaviour
             for (int j = 0; j < 5; j++)
             {
                 if (Global.currentPositionX == i && Global.currentPositionY == j) continue;
+                if (listPositionEnemy.Contains(cells[i, j])) continue;
                 if((Mathf.Abs(Global.currentPositionX-i) <= moveSpeed && Mathf.Abs(Global.currentPositionY-j) == 0) || (Mathf.Abs(Global.currentPositionX - i) == 0 && Mathf.Abs(Global.currentPositionY - j) <= moveSpeed))
                 {
                     GameObject cell = cells[i, j];
