@@ -35,7 +35,7 @@ public class Character : MonoBehaviour
     void Update()
     {
         //Move character
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Battle Idle"))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
