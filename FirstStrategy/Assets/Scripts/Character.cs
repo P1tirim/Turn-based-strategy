@@ -43,8 +43,11 @@ public class Character : MonoBehaviour
             {
                 if (hit.transform.gameObject.tag == "Particle")
                 {
-                    Move();
-                }else if(hit.transform.gameObject.tag == "ParticleEnemy")
+                    Turn();
+                    animator.SetTrigger("Walk");
+                    elapsedTime = 0.0f;
+                }
+                else if(hit.transform.gameObject.tag == "ParticleEnemy")
                 {
                     Attack();
                 }
@@ -67,105 +70,103 @@ public class Character : MonoBehaviour
     }
 
     //Move and Turn
-    void Move()
+    void Turn()
     {
         
-                DefinitionSide();
-                string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+        DefinitionSide();
+        string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
 
-                //turn depending on the side of the world the character is looking at
-                if (Global.currentPositionX - int.Parse(xy[0]) == 1)
-                {
-                    if (side == "nord")
-                    {
-                        animator.SetTrigger("Turn right");
-                        Debug.Log("North1");
-                    }
-                    else if (side == "east")
-                    {
-                        Debug.Log("East1");
-                    }
-                    else if (side == "south")
-                    {
-                        animator.SetTrigger("Turn left");
-                        Debug.Log("South1");
-                    }
-                    else
-                    {
-                        animator.SetTrigger("Turn back");
-                        Debug.Log("West1");
-                    }
-                }
-                else if (Global.currentPositionX - int.Parse(xy[0]) == -1)
-                {
-                    if (side == "nord")
-                    {
-                        animator.SetTrigger("Turn left");
-                        Debug.Log("North2");
-                    }
-                    else if (side == "east")
-                    {
-                        animator.SetTrigger("Turn back");
-                        Debug.Log("East2");
-                    }
-                    else if (side == "south")
-                    {
-                        animator.SetTrigger("Turn right");
-                        Debug.Log("South2");
-                    }
-                    else
-                    {
-                        Debug.Log("West2");
-                    }
-                }
-                else if (Global.currentPositionY - int.Parse(xy[1]) == 1)
-                {
-                    if (side == "nord")
-                    {
-                        Debug.Log("North3");
-                    }
-                    else if (side == "east")
-                    {
-                        animator.SetTrigger("Turn left");
-                        Debug.Log("East3");
-                    }
-                    else if (side == "south")
-                    {
-                        animator.SetTrigger("Turn back");
-                        Debug.Log("South3");
-                    }
-                    else
-                    {
-                        animator.SetTrigger("Turn right");
-                        Debug.Log("West3");
-                    }
-
-                }
-                else if (Global.currentPositionY - int.Parse(xy[1]) == -1)
-                {
-                    if (side == "nord")
-                    {
-                        animator.SetTrigger("Turn back");
-                        Debug.Log("North4");
-                    }
-                    else if (side == "east")
-                    {
-                        animator.SetTrigger("Turn right");
-                        Debug.Log("East4");
-                    }
-                    else if (side == "south")
-                    {
-                        Debug.Log("South4");
-                    }
-                    else
-                    {
-                        animator.SetTrigger("Turn left");
-                        Debug.Log("West4");
-                    }
-                }
-                animator.SetTrigger("Walk");
-                elapsedTime = 0.0f;
+        //turn depending on the side of the world the character is looking at
+        if (Global.currentPositionX - int.Parse(xy[0]) == 1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("North1");
             }
+            else if (side == "east")
+            {
+                Debug.Log("East1");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("South1");
+            }
+            else
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("West1");
+                    }
+            }
+        else if (Global.currentPositionX - int.Parse(xy[0]) == -1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("North2");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("East2");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("South2");
+            }
+            else
+            {
+                 Debug.Log("West2");
+            }
+        }
+        else if (Global.currentPositionY - int.Parse(xy[1]) == 1)
+        {
+            if (side == "nord")
+            {
+                Debug.Log("North3");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("East3");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("South3");
+            }
+            else
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("West3");
+            }
+        }
+        else if (Global.currentPositionY - int.Parse(xy[1]) == -1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("North4");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("East4");
+            }
+            else if (side == "south")
+            {
+                Debug.Log("South4");
+            }
+            else
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("West4");
+            }
+        }
+                
+    }
         
     
 
@@ -269,6 +270,7 @@ public class Character : MonoBehaviour
 
     void Attack()
     {
+        Turn();
         animator.SetTrigger("Attack");
     }
 }
