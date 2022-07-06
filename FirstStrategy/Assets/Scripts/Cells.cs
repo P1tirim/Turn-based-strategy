@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public static class Global
+{
+   public static int currentPositionX = 2;
+   public static int currentPositionY = 4;
+}
 public class Cells : MonoBehaviour
 {
     public int moveSpeed = 1;
     public GameObject particle;
 
-    int currentPositionX = 2;
-    int currentPositionY = 4;
     GameObject[,] cells = new GameObject[5, 5];
     List<GameObject> listParticles = new List<GameObject>();
     GameObject lastObj;
@@ -26,28 +29,9 @@ public class Cells : MonoBehaviour
     {
         ChangeColor();
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
-            {
-                if (hit.transform.gameObject.tag == "Particle")
-                {
-                    string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
-                    currentPositionX = int.Parse(xy[0]);
-                    currentPositionY = int.Parse(xy[1]);
-
-                    for(int i = 0; i < listParticles.Count; i++)
-                    {
-                        Destroy(listParticles[i]);
-                    }
-                    SpawnParticle();
-                    
-                }
-            }
-        }
+       
+            
+        
     }
 
     //Put cells in array for further use
@@ -72,8 +56,8 @@ public class Cells : MonoBehaviour
         {
             for (int j = 0; j < 5; j++)
             {
-                if (currentPositionX == i && currentPositionY == j) continue;
-                if(Mathf.Abs(currentPositionX-i) <= moveSpeed && Mathf.Abs(currentPositionY-j) <= moveSpeed)
+                if (Global.currentPositionX == i && Global.currentPositionY == j) continue;
+                if((Mathf.Abs(Global.currentPositionX-i) <= moveSpeed && Mathf.Abs(Global.currentPositionY-j) == 0) || (Mathf.Abs(Global.currentPositionX - i) == 0 && Mathf.Abs(Global.currentPositionY - j) <= moveSpeed))
                 {
                     GameObject cell = cells[i, j];
                     Vector3 vector;
@@ -89,7 +73,7 @@ public class Cells : MonoBehaviour
     }
  
     //changes in the color of a cell when hovering over it with the cursor
-    void ChangeColor()
+   public void ChangeColor()
     {
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -111,5 +95,22 @@ public class Cells : MonoBehaviour
         }
     }
 
+    //Change current position of the character
+    public void ChangeCurrentPosition(RaycastHit hit)
+    {
+       
+         string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+         Global.currentPositionX = int.Parse(xy[0]);
+         Global.currentPositionY = int.Parse(xy[1]);
 
-}
+         for (int i = 0; i < listParticles.Count; i++)
+         {
+         Destroy(listParticles[i]);
+         }
+         SpawnParticle();
+
+            
+        }
+    }
+
+
