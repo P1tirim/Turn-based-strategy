@@ -2,43 +2,32 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public static class Global
-{
-   public static int currentPositionX = 2;
-   public static int currentPositionY = 4;
 
-   public static int currentPositionEnemyX = 2;
-   public static int currentPositionEnemyY = 2;
-}
 public class Cells : MonoBehaviour
 {
     public int moveSpeed = 1;
     public GameObject particleMove;
     public GameObject particleEnemy;
 
-    GameObject[,] cells = new GameObject[5, 5];
     List<GameObject> listParticles = new List<GameObject>();
-    List<GameObject> listPositionEnemy = new List<GameObject>();
     GameObject lastObj;
     GameObject newParticle;
+
+    public GameObject gameManager;
+    GameManager linkGameManager;
 
     // Start is called before the first frame update
     void Start()
     {
+        linkGameManager = gameManager.GetComponent<GameManager>();
         CellsInArray();
-        SpawnParticle();
-        listPositionEnemy.Add(cells[Global.currentPositionEnemyX, Global.currentPositionEnemyY]);
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        ChangeColor();
-
-       
-            
-        
+        ChangeColor();        
     }
 
     //Put cells in array for further use
@@ -49,29 +38,38 @@ public class Cells : MonoBehaviour
         {
             for (int j = 0; j < 5; j++)
             {
-                cells[i, j] = this.gameObject.transform.GetChild(child).gameObject;
+                Global.cells[i, j] = this.gameObject.transform.GetChild(child).gameObject;
                 child++;
             }
         }
+
+        for(int i = 0; i < Global.listCharactersInGame.Count; i++)
+        {
+            if (Global.listCharactersInGame[i].obj.tag == "Enemy")
+            {
+                Global.listPositionEnemy.Add(Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY]);
+            }
+        }
+        linkGameManager.spawn();
     }
 
     //Span particle which show the cells where you can go
-    void SpawnParticle()
+    public void SpawnParticle(int currentPositionX,int currentPositionY)
     {
         
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
             {
-                if (Global.currentPositionX == i && Global.currentPositionY == j) continue;
-                if((Mathf.Abs(Global.currentPositionX-i) <= moveSpeed && Mathf.Abs(Global.currentPositionY-j) == 0) || (Mathf.Abs(Global.currentPositionX - i) == 0 && Mathf.Abs(Global.currentPositionY - j) <= moveSpeed))
+                if (currentPositionX == i && currentPositionY == j) continue;
+                if((Mathf.Abs(currentPositionX-i) <= moveSpeed && Mathf.Abs(currentPositionY-j) == 0) || (Mathf.Abs(currentPositionX - i) == 0 && Mathf.Abs(currentPositionY - j) <= moveSpeed))
                 {
-                    GameObject cell = cells[i, j];
+                    GameObject cell = Global.cells[i, j];
                     Vector3 vector;
                     vector.x = cell.transform.position.x + 0.18f;
                     vector.y = cell.transform.position.y;
                     vector.z = cell.transform.position.z;
-                    if (listPositionEnemy.Contains(cells[i, j]))
+                    if (Global.listPositionEnemy.Contains(Global.cells[i, j]))
                     {
                        newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                     }
@@ -128,14 +126,13 @@ public class Cells : MonoBehaviour
     {
        
          string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
-         Global.currentPositionX = int.Parse(xy[0]);
-         Global.currentPositionY = int.Parse(xy[1]);
+         Global.currentPerson.currentPositionX = int.Parse(xy[0]);
+         Global.currentPerson.currentPositionY = int.Parse(xy[1]);
 
          for (int i = 0; i < listParticles.Count; i++)
          {
          Destroy(listParticles[i]);
          }
-         SpawnParticle();
 
             
         }

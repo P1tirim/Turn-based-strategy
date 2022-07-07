@@ -6,7 +6,9 @@ public class Character : MonoBehaviour
 {
     float elapsedTime = 0.0f;
     public GameObject cells;
+    public GameObject gameManager;
     Cells linkCells;
+    GameManager linkGameManager;
     Animator animator;
 
     public GameObject nord;
@@ -28,44 +30,58 @@ public class Character : MonoBehaviour
     void Start()
     {
         linkCells = cells.GetComponent<Cells>();
+        linkGameManager = gameManager.GetComponent<GameManager>();
         animator = this.GetComponent<Animator>();
+
+        //Create new character
+        Person character = new Person();
+        character.obj = this.gameObject;
+        character.currentPositionX = 2;
+        character.currentPositionY = 4;
+        Global.listCharactersInGame.Insert(0, character);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Move character
-        if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Battle Idle"))
+        if (Global.currentPerson.obj == this.gameObject)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
+            //Move character
+            if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Battle Idle"))
             {
-                if (hit.transform.gameObject.tag == "Particle")
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
                 {
-                    Turn();
-                    animator.SetTrigger("Walk");
-                    elapsedTime = 0.0f;
-                }
-                else if(hit.transform.gameObject.tag == "ParticleEnemy")
-                {
-                    Attack();
+                    if (hit.transform.gameObject.tag == "Particle")
+                    {
+                        Turn();
+                        animator.SetTrigger("Walk");
+                        elapsedTime = 0.0f;
+                    }
+                    else if (hit.transform.gameObject.tag == "ParticleEnemy")
+                    {
+                        Attack();
+                    }
                 }
             }
-        }
 
-        //Stop walking
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime >= 0.7f)
-        {
-            animator.SetTrigger("Stop Walk");
-            elapsedTime = 0.0f;
-            linkCells.ChangeCurrentPosition(hit);
-            RotationAfterWalk();
-
-        }else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime < 0.7f)
-        {
-            elapsedTime += Time.deltaTime;
+            //Stop walking
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime >= 0.7f)
+            {
+                animator.SetTrigger("Stop Walk");
+                elapsedTime = 0.0f;
+                linkCells.ChangeCurrentPosition(hit);
+                RotationAfterWalk();
+                linkGameManager.NextPerson();
+            }
+            else if (animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime < 0.7f)
+            {
+                elapsedTime += Time.deltaTime;
+            }
         }
+        
         
     }
 
@@ -77,7 +93,7 @@ public class Character : MonoBehaviour
         string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
 
         //turn depending on the side of the world the character is looking at
-        if (Global.currentPositionX - int.Parse(xy[0]) == 1)
+        if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == 1)
         {
             if (side == "nord")
             {
@@ -99,7 +115,7 @@ public class Character : MonoBehaviour
                 Debug.Log("West1");
                     }
             }
-        else if (Global.currentPositionX - int.Parse(xy[0]) == -1)
+        else if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == -1)
         {
             if (side == "nord")
             {
@@ -121,7 +137,7 @@ public class Character : MonoBehaviour
                  Debug.Log("West2");
             }
         }
-        else if (Global.currentPositionY - int.Parse(xy[1]) == 1)
+        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == 1)
         {
             if (side == "nord")
             {
@@ -143,7 +159,7 @@ public class Character : MonoBehaviour
                 Debug.Log("West3");
             }
         }
-        else if (Global.currentPositionY - int.Parse(xy[1]) == -1)
+        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == -1)
         {
             if (side == "nord")
             {
@@ -217,8 +233,8 @@ public class Character : MonoBehaviour
     {
         DefinitionSide();
 
-        string numberX = (Global.currentPositionX).ToString();
-        string numberY = (Global.currentPositionY).ToString();
+        string numberX = (Global.currentPerson.currentPositionX).ToString();
+        string numberY = (Global.currentPerson.currentPositionY).ToString();
 
         if(side == "nord" || side == "south")
         {
@@ -272,5 +288,7 @@ public class Character : MonoBehaviour
     {
         Turn();
         animator.SetTrigger("Attack");
+        linkGameManager.NextPerson();
     }
+
 }
