@@ -351,6 +351,7 @@
 "Assets/Scripts/Character.cs"
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/Motion.cs"
 -langversion:9.0
 
 /deterministic

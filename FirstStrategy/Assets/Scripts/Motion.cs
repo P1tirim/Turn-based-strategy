@@ -1,0 +1,284 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Motion : MonoBehaviour
+{
+    
+
+    public GameObject nord;
+    public GameObject south;
+    public GameObject west;
+    public GameObject east;
+
+    string side;
+    RaycastHit hit;
+
+    Vector3 targetDirNord;
+    Vector3 targetDirSouth;
+    Vector3 targetDirEast;
+    Vector3 targetDirWest;
+
+    
+
+    public GameObject[] sideForRotation = new GameObject[10];
+
+    float elapsedTime = 0.0f;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+        
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void walk(Animator animator, GameManager linkGameManager, Cells linkCells)
+    {
+        //Move character
+        if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Battle Idle"))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.transform.gameObject.tag == "Particle")
+                {
+                    Turn(animator);
+                    animator.SetTrigger("Walk");
+                    elapsedTime = 0.0f;
+                }
+                else if (hit.transform.gameObject.tag == "ParticleEnemy")
+                {
+                    Attack(animator, linkGameManager);
+                }
+            }
+        }
+
+        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime >= 0.75f)
+        {
+            animator.SetTrigger("Stop Walk");
+            RotationAfterWalk();
+            linkCells.ChangeCurrentPosition(hit);
+            linkGameManager.NextPerson();
+
+        }else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Walk") && elapsedTime < 0.75f)
+        {
+            elapsedTime += Time.deltaTime;
+        }
+        
+    }
+
+    //Move and Turn
+    public void Turn(Animator animator)
+    {
+
+        DefinitionSide();
+        string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+
+        //turn depending on the side of the world the character is looking at
+        if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == 1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("North1");
+            }
+            else if (side == "east")
+            {
+                Debug.Log("East1");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("South1");
+            }
+            else
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("West1");
+            }
+        }
+        else if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == -1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("North2");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("East2");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("South2");
+            }
+            else
+            {
+                Debug.Log("West2");
+            }
+        }
+        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == 1)
+        {
+            if (side == "nord")
+            {
+                Debug.Log("North3");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("East3");
+            }
+            else if (side == "south")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("South3");
+            }
+            else
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("West3");
+            }
+        }
+        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == -1)
+        {
+            if (side == "nord")
+            {
+                animator.SetTrigger("Turn back");
+                Debug.Log("North4");
+            }
+            else if (side == "east")
+            {
+                animator.SetTrigger("Turn right");
+                Debug.Log("East4");
+            }
+            else if (side == "south")
+            {
+                Debug.Log("South4");
+            }
+            else
+            {
+                animator.SetTrigger("Turn left");
+                Debug.Log("West4");
+            }
+        }
+
+    }
+
+    //Defination side of the world
+    public void DefinitionSide()
+    {
+        targetDirNord = nord.transform.position - transform.position;
+        targetDirSouth = south.transform.position - transform.position;
+        targetDirEast = east.transform.position - transform.position;
+        targetDirWest = west.transform.position - transform.position;
+
+        float angleNord = Vector3.Angle(targetDirNord, transform.forward);
+        float angleSouth = Vector3.Angle(targetDirSouth, transform.forward);
+        float angleEast = Vector3.Angle(targetDirEast, transform.forward);
+        float angleWest = Vector3.Angle(targetDirWest, transform.forward);
+        float min = angleNord;
+        int index = 0;
+        float[] arr = new float[4] { angleNord, angleSouth, angleEast, angleWest };
+        for (int i = 1; i < 4; i++)
+        {
+            if (arr[i] < min)
+            {
+                min = arr[i];
+                index = i;
+            }
+        }
+
+        switch (index)
+        {
+            case 0:
+                side = "nord";
+                break;
+            case 1:
+                side = "south";
+                break;
+            case 2:
+                side = "east";
+                break;
+            case 3:
+                side = "west";
+                break;
+        }
+
+        //adjusting the character in the cell
+        
+
+        
+    }
+    public void RotationAfterWalk()
+    {
+        DefinitionSide();
+
+        string numberX = (Global.currentPerson.currentPositionX).ToString();
+        string numberY = (Global.currentPerson.currentPositionY).ToString();
+
+        if (side == "nord" || side == "south")
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                string name = "n" + numberX;
+                if (sideForRotation[i].name == name)
+                {
+                    if (side == "nord")
+                    {
+                        transform.LookAt(sideForRotation[i].transform);
+                    }
+                    else
+                    {
+                        transform.LookAt(sideForRotation[i].transform);
+                        transform.Rotate(0, 180, 0);
+                    }
+                    break;
+                }
+            }
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                string name = "w" + numberY;
+                if (sideForRotation[i].name == name)
+                {
+                    if (side == "west")
+                    {
+                        transform.LookAt(sideForRotation[i].transform);
+                    }
+                    else
+                    {
+                        transform.LookAt(sideForRotation[i].transform, Vector3.up);
+                        transform.Rotate(0, 180, 0);
+                    }
+                    break;
+                }
+            }
+        }
+        Vector3 vector;
+        vector.x = hit.transform.position.x + 0.1f;
+        vector.y = 0;
+        vector.z = hit.transform.position.z;
+
+        transform.position = vector;
+    }
+
+
+    public void Attack(Animator animator, GameManager linkGameManager)
+    {
+        Turn(animator);
+        animator.SetTrigger("Attack");
+        linkGameManager.NextPerson();
+    }
+}
