@@ -47,7 +47,11 @@ public class Cells : MonoBehaviour
         {
             if (Global.listCharactersInGame[i].obj.tag == "Enemy")
             {
-                Global.listPositionEnemy.Add(Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY]);
+                Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];
+            }
+            else
+            {
+                Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];
             }
         }
         linkGameManager.spawn();
@@ -56,7 +60,10 @@ public class Cells : MonoBehaviour
     //Span particle which show the cells where you can go
     public void SpawnParticle(int currentPositionX,int currentPositionY)
     {
-        
+        for (int i = 0; i < listParticles.Count; i++)
+        {
+            Destroy(listParticles[i]);
+        }
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
@@ -64,21 +71,37 @@ public class Cells : MonoBehaviour
                 if (currentPositionX == i && currentPositionY == j) continue;
                 if((Mathf.Abs(currentPositionX-i) <= moveSpeed && Mathf.Abs(currentPositionY-j) == 0) || (Mathf.Abs(currentPositionX - i) == 0 && Mathf.Abs(currentPositionY - j) <= moveSpeed))
                 {
+                    bool spawn = false;
                     GameObject cell = Global.cells[i, j];
                     Vector3 vector;
-                    vector.x = cell.transform.position.x + 0.18f;
+                    vector.x = cell.transform.position.x + 2f;
                     vector.y = cell.transform.position.y;
                     vector.z = cell.transform.position.z;
-                    if (Global.listPositionEnemy.Contains(Global.cells[i, j]))
+                    for(int k = 0; k < Global.listCharactersInGame.Count; k++)
                     {
-                       newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
-                    }
-                    else
-                    {
-                       newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                        if (Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
+                        {
+                            newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                            spawn = true;
+
+                        }else if(Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell)
+                        {
+                            spawn = true;
+
+                        }
+                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell)
+                        {
+                            newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                            spawn = true;
+
+                        }
+                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
+                        {
+                            spawn = true;
+                        }
                         
                     }
-                    
+                    if(spawn == false) newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                     listParticles.Add(newParticle as GameObject);
                 }
             }
@@ -124,12 +147,13 @@ public class Cells : MonoBehaviour
     //Change current position of the character
     public void ChangeCurrentPosition(RaycastHit hit)
     {
-       
+         
          string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
          Global.currentPerson.currentPositionX = int.Parse(xy[0]);
          Global.currentPerson.currentPositionY = int.Parse(xy[1]);
+         Global.currentPerson.currentCell = Global.cells[Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY];
 
-         for (int i = 0; i < listParticles.Count; i++)
+        for (int i = 0; i < listParticles.Count; i++)
          {
          Destroy(listParticles[i]);
          }

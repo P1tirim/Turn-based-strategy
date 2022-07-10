@@ -6,6 +6,7 @@ public static class Global
 {
     public static List<Person> listCharactersInGame = new List<Person>();
     public static List<GameObject> listPositionEnemy = new List<GameObject>();
+    public static List<GameObject> listPositionPlayer = new List<GameObject>();
     public static Person currentPerson;
     public static GameObject[,] cells = new GameObject[5, 5];
 }
@@ -49,4 +50,5 @@ public class Person
     public GameObject obj;
     public int currentPositionX;
     public int currentPositionY;
+    public GameObject currentCell;
 }

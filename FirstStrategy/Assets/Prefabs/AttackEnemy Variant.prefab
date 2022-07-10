@@ -9,15 +9,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -703652448835706628, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
       propertyPath: m_Size.x
-      value: 46
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -703652448835706628, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
       propertyPath: m_Size.y
-      value: 2.2
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: -703652448835706628, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
       propertyPath: m_Size.z
-      value: 50000
+      value: 100000
       objectReference: {fileID: 0}
     - target: {fileID: 7790366347254455984, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
       propertyPath: m_RootOrder

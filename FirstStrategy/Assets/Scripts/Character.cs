@@ -12,12 +12,18 @@ public class Character : Motion
 
     Animator animator;
 
+    UnityEngine.AI.NavMeshAgent agent;
+
     // Start is called before the first frame update
     void Start()
     {
         animator = this.GetComponent<Animator>();
         linkCells = cells.GetComponent<Cells>();
         linkGameManager = gameManager.GetComponent<GameManager>();
+        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+
+        agent.updatePosition = false;
+        
 
         //Create new character
         Person character = new Person();
@@ -33,23 +39,25 @@ public class Character : Motion
     {
         if (Global.currentPerson.obj == this.gameObject)
         {
-            walk(animator, linkGameManager, linkCells);
+            walk(animator, linkGameManager, linkCells, agent);
         }
         
         
     }
 
-    
-    
-        
-    
 
-   
-    
 
-    
-    
 
-    
+
+
+
+
+
+
+
+
+
+
+
 
 }
