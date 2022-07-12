@@ -13,6 +13,10 @@ public class Character : Motion
     Animator animator;
 
     UnityEngine.AI.NavMeshAgent agent;
+    RaycastHit hit;
+
+    Transform obj;
+    bool click = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +36,7 @@ public class Character : Motion
         character.currentPositionY = 4;
         Global.listCharactersInGame.Insert(0, character);
 
+        obj = cells.transform;
     }
 
     // Update is called once per frame
@@ -39,7 +44,21 @@ public class Character : Motion
     {
         if (Global.currentPerson.obj == this.gameObject)
         {
-            walk(animator, linkGameManager, linkCells, agent);
+            if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            {
+                Debug.Log(Global.currentPerson.obj.name);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    obj = hit.transform;
+                    click = true;
+                    walk(animator, linkGameManager, linkCells, agent, obj, click);
+                    click = false;
+                }
+            }
+            walk(animator, linkGameManager, linkCells, agent, obj, click);
+
         }
         
         

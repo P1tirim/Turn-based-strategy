@@ -12,7 +12,7 @@ public class Motion : MonoBehaviour
     public GameObject east;
 
     string side;
-    RaycastHit hit;
+    
 
     Vector3 targetDirNord;
     Vector3 targetDirSouth;
@@ -39,30 +39,25 @@ public class Motion : MonoBehaviour
         
     }
 
-    public void walk(Animator animator, GameManager linkGameManager, Cells linkCells, UnityEngine.AI.NavMeshAgent agent)
+    public void walk(Animator animator, GameManager linkGameManager, Cells linkCells, UnityEngine.AI.NavMeshAgent agent, Transform obj, bool click)
     {
         //Move character
-        if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+        if(obj != null)
         {
-            Debug.Log(Global.currentPerson.obj.name);
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hit))
+            if (obj.transform.gameObject.tag == "ParticleMove" && click)
             {
-                if (hit.transform.gameObject.tag == "Particle")
-                {
-                    turnAndMove = true;
-                    transform.position = agent.nextPosition;
-                    Turn(animator, agent);
-                    
-                    Debug.Log(agent.remainingDistance);
-                }
-                else if (hit.transform.gameObject.tag == "ParticleEnemy")
-                {
-                    Attack(animator, linkGameManager, agent);
-                }
+                turnAndMove = true;
+                transform.position = agent.nextPosition;
+                Turn(animator, agent, obj);
+            }
+            else if (obj.transform.gameObject.tag == "ParticleAttack" && click)
+            {
+                Attack(animator, linkGameManager, agent, obj);
             }
         }
+        
+            
+        
         
         if (agent.remainingDistance <= agent.stoppingDistance && move && !agent.pathPending)
         {
@@ -72,8 +67,7 @@ public class Motion : MonoBehaviour
             move = false;
             animator.SetFloat("Blend", 0);
             transform.position = agent.nextPosition;
-            RotationAfterWalk();
-            linkCells.ChangeCurrentPosition(hit);
+            linkCells.ChangeCurrentPosition(obj);
             linkGameManager.NextPerson();
 
         }else if(agent.remainingDistance > agent.stoppingDistance && move && animator.GetCurrentAnimatorStateInfo(0).IsName("Blend"))
@@ -86,10 +80,10 @@ public class Motion : MonoBehaviour
     
 
     //Move and Turn
-    public void Turn(Animator animator, UnityEngine.AI.NavMeshAgent agent)
+    public void Turn(Animator animator, UnityEngine.AI.NavMeshAgent agent, Transform obj)
     {
         DefinitionSide();
-        string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+        string[] xy = obj.parent.name.Split(new char[] { ' ' });
 
         //turn depending on the side of the world the character is looking at
         if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == 1)
@@ -100,7 +94,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("North1");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
                 
             }
@@ -110,7 +104,7 @@ public class Motion : MonoBehaviour
                 if (turnAndMove)
                 {
                     move = true;
-                    agent.destination = hit.transform.position;
+                    agent.destination = obj.transform.position;
                     animator.SetBool("move", true);
                     agent.updateRotation = true;
                 }
@@ -121,7 +115,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("South1");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else
@@ -130,7 +124,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("West1");
                 if(turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             
@@ -143,7 +137,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("North2");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else if (side == "east")
@@ -152,7 +146,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("East2");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else if (side == "south")
@@ -161,7 +155,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("South2");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else
@@ -170,7 +164,7 @@ public class Motion : MonoBehaviour
                 if (turnAndMove)
                 {
                     move = true;
-                    agent.destination = hit.transform.position;
+                    agent.destination = obj.position;
                     animator.SetBool("move", true);
                     agent.updateRotation = true;
                 }   
@@ -185,7 +179,7 @@ public class Motion : MonoBehaviour
                 if (turnAndMove)
                 {
                     move = true;
-                    agent.destination = hit.transform.position;
+                    agent.destination = obj.position;
                     animator.SetBool("move", true);
                     agent.updateRotation = true;
                 }
@@ -196,7 +190,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("East3");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else if (side == "south")
@@ -205,7 +199,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("South3");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else
@@ -214,7 +208,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("West3");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             
@@ -227,7 +221,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("North4");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else if (side == "east")
@@ -236,7 +230,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("East4");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             else if (side == "south")
@@ -245,7 +239,7 @@ public class Motion : MonoBehaviour
                 if (turnAndMove)
                 {
                     move = true;
-                    agent.destination = hit.transform.position;
+                    agent.destination = obj.position;
                     animator.SetBool("move", true);
                     agent.updateRotation = true;
                 }
@@ -256,7 +250,7 @@ public class Motion : MonoBehaviour
                 Debug.Log("West4");
                 if (turnAndMove)
                 {
-                    StartCoroutine(wait(agent, animator));
+                    StartCoroutine(wait(agent, animator, obj));
                 }
             }
             
@@ -264,12 +258,12 @@ public class Motion : MonoBehaviour
         
     }
 
-    IEnumerator wait(UnityEngine.AI.NavMeshAgent agent, Animator animator)
+    IEnumerator wait(UnityEngine.AI.NavMeshAgent agent, Animator animator, Transform obj)
     {
         yield return new WaitForSeconds(1.2f);
         move = true;
         animator.SetBool("move", true);
-        agent.destination = hit.transform.position;
+        agent.destination = obj.position;
         agent.updateRotation = true;
     }
 
@@ -318,27 +312,13 @@ public class Motion : MonoBehaviour
 
         
     }
-    public void RotationAfterWalk()
-    {
-        DefinitionSide();
-
-        string numberX = (Global.currentPerson.currentPositionX).ToString();
-        string numberY = (Global.currentPerson.currentPositionY).ToString();
-
-        
-        Vector3 vector;
-        vector.x = hit.transform.position.x;
-        vector.y = 0;
-        vector.z = hit.transform.position.z;
-
-      //  transform.position = vector;
-    }
 
 
-    public void Attack(Animator animator, GameManager linkGameManager, UnityEngine.AI.NavMeshAgent agent)
+
+    public void Attack(Animator animator, GameManager linkGameManager, UnityEngine.AI.NavMeshAgent agent, Transform obj)
     {
         turnAndMove = false;
-        Turn(animator, agent);
+        Turn(animator, agent, obj);
         animator.SetTrigger("Attack");
         StartCoroutine(waitAttack(linkGameManager));
     }

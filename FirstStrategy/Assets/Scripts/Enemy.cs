@@ -17,6 +17,14 @@ public class Enemy : Motion
 
     UnityEngine.AI.NavMeshAgent agent;
 
+    Transform obj;
+    bool click = false;
+
+    Person nearestPlayer;
+
+    List<GameObject> listParticlesMove = new List<GameObject>();
+    List<GameObject> listParticlesAttack = new List<GameObject>();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +41,8 @@ public class Enemy : Motion
         character.currentPositionX = startPositionX;
         character.currentPositionY = startPositionY;
         Global.listCharactersInGame.Add(character);
-    
+
+        obj = cells.transform;
     }
 
     // Update is called once per frame
@@ -41,7 +50,105 @@ public class Enemy : Motion
     {
         if(Global.currentPerson.obj == this.gameObject)
         {
-            walk(animator, linkGameManager, linkCells, agent);
+            if (Global.first)
+            {
+                StartCoroutine(wait());
+            }
+            else
+            {
+                
+                walk(animator, linkGameManager, linkCells, agent, obj, click);
+            }
+            
+            
         }
+    }
+
+    IEnumerator wait()
+    {
+        Global.first = false;
+        yield return new WaitForSeconds(3f);
+        DeterminingNearestPlayer();
+    }
+
+    //Choose cells for move or attack. Attack is a priority
+    void chooseCell()
+    {
+        listParticlesAttack.Clear();
+        listParticlesMove.Clear();
+        GameObject particle = null;
+        for (int i = 0; i < Global.listParticles.Count; i++)
+        {
+            if (Global.listParticles[i].tag == "ParticleMove")
+            {
+                listParticlesMove.Add(Global.listParticles[i]);
+            }
+            else
+            {
+                listParticlesAttack.Add(Global.listParticles[i]);
+            }
+        }
+
+        
+        if (listParticlesAttack.Count > 0)
+        {
+            particle = listParticlesAttack[Random.Range(0, listParticlesAttack.Count)];
+        }
+        else if(listParticlesMove.Count > 0)
+        {
+            int ch = Mathf.Abs(Global.currentPerson.currentPositionX - nearestPlayer.currentPositionX) + Mathf.Abs(Global.currentPerson.currentPositionY - nearestPlayer.currentPositionY);
+            int i = 0;
+            while (true)
+            {
+                string[] xy = listParticlesMove[i].transform.parent.name.Split(new char[] { ' ' });
+                int x = int.Parse(xy[0]);
+                int y = int.Parse(xy[1]);
+
+                int newch = Mathf.Abs(x - nearestPlayer.currentPositionX) + Mathf.Abs(y - nearestPlayer.currentPositionY);
+                if(newch >= ch)
+                {
+                    listParticlesMove.Remove(listParticlesMove[i]);
+                }
+                else
+                {
+                    i++;
+                }
+                if (i == listParticlesMove.Count) break;
+            }
+            if(listParticlesMove.Count > 0) particle = listParticlesMove[Random.Range(0, listParticlesAttack.Count)];
+        }
+        if(particle == null)
+        {
+            obj = null;
+        }
+        else
+        {
+            obj = particle.transform;
+        }
+        
+        click = true;        
+        walk(animator, linkGameManager, linkCells, agent, obj, click);
+        click = false;
+        
+    }
+
+    //determination of the nearest player to be followed by movement
+    void DeterminingNearestPlayer()
+    {
+        
+        int min = 1000000;
+        for(int i = 0; i < Global.listCharactersInGame.Count; i++)
+        {
+            if (Global.listCharactersInGame[i].obj.tag == "Player")
+            {
+                int ch = Mathf.Abs(Global.currentPerson.currentPositionX - Global.listCharactersInGame[i].currentPositionX) + Mathf.Abs(Global.currentPerson.currentPositionY - Global.listCharactersInGame[i].currentPositionY);
+                if (ch < min)
+                {
+                    min = ch;
+                    nearestPlayer = Global.listCharactersInGame[i];
+                }
+            }
+        }
+        chooseCell();
     }
 }

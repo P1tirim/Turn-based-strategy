@@ -9,7 +9,6 @@ public class Cells : MonoBehaviour
     public GameObject particleMove;
     public GameObject particleEnemy;
 
-    List<GameObject> listParticles = new List<GameObject>();
     GameObject lastObj;
     GameObject newParticle;
 
@@ -60,10 +59,11 @@ public class Cells : MonoBehaviour
     //Span particle which show the cells where you can go
     public void SpawnParticle(int currentPositionX,int currentPositionY)
     {
-        for (int i = 0; i < listParticles.Count; i++)
+        for (int i = 0; i < Global.listParticles.Count; i++)
         {
-            Destroy(listParticles[i]);
+            Destroy(Global.listParticles[i]);
         }
+        Global.listParticles.Clear();
         for (int i = 0; i < 5; i++)
         {
             for (int j = 0; j < 5; j++)
@@ -102,7 +102,7 @@ public class Cells : MonoBehaviour
                         
                     }
                     if(spawn == false) newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
-                    listParticles.Add(newParticle as GameObject);
+                    Global.listParticles.Add(newParticle as GameObject);
                 }
             }
         }
@@ -118,23 +118,23 @@ public class Cells : MonoBehaviour
             if (hit.transform.gameObject != lastObj && lastObj != null)
             {
                 var main = lastObj.GetComponent<ParticleSystem>().main;
-                if(lastObj.tag == "Particle")
+                if(lastObj.tag == "ParticleMove")
                 {
                     main.startColor = Color.blue;
-                }else if(lastObj.tag == "ParticleEnemy")
+                }else if(lastObj.tag == "ParticleAttack")
                 {
                     main.startColor = Color.yellow;
                 }
                 
             }
-            if (hit.transform.gameObject.tag == "Particle")
+            if (hit.transform.gameObject.tag == "ParticleMove")
             {
                 var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
                 main.startColor = Color.green;
 
                 lastObj = hit.transform.gameObject;
             }
-            if(hit.transform.gameObject.tag == "ParticleEnemy")
+            if(hit.transform.gameObject.tag == "ParticleAttack")
             {
                 var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
                 main.startColor = Color.red;
@@ -145,21 +145,20 @@ public class Cells : MonoBehaviour
     }
 
     //Change current position of the character
-    public void ChangeCurrentPosition(RaycastHit hit)
+    public void ChangeCurrentPosition(Transform obj)
     {
-         
-         string[] xy = hit.transform.parent.name.Split(new char[] { ' ' });
+         string[] xy = obj.parent.name.Split(new char[] { ' ' });
          Global.currentPerson.currentPositionX = int.Parse(xy[0]);
          Global.currentPerson.currentPositionY = int.Parse(xy[1]);
          Global.currentPerson.currentCell = Global.cells[Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY];
 
-        for (int i = 0; i < listParticles.Count; i++)
+        for (int i = 0; i < Global.listParticles.Count; i++)
          {
-         Destroy(listParticles[i]);
-         }
-
-            
+            Destroy(Global.listParticles[i]);
         }
+        Global.listParticles.Clear();
+
+    }
     }
 
 

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -703652448835706628}
   m_Layer: 0
   m_Name: CanMoveParticle
-  m_TagString: Particle
+  m_TagString: ParticleMove
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

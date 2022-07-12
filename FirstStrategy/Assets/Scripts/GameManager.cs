@@ -7,8 +7,10 @@ public static class Global
     public static List<Person> listCharactersInGame = new List<Person>();
     public static List<GameObject> listPositionEnemy = new List<GameObject>();
     public static List<GameObject> listPositionPlayer = new List<GameObject>();
+    public static List<GameObject> listParticles = new List<GameObject>();
     public static Person currentPerson;
     public static GameObject[,] cells = new GameObject[5, 5];
+    public static bool first = true;
 }
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +32,7 @@ public class GameManager : MonoBehaviour
     //Next round
     public void NextPerson()
     {
+        Global.first = true;
         Person item = Global.listCharactersInGame[0];
         Global.listCharactersInGame.Remove(item);
         Global.listCharactersInGame.Add(item);

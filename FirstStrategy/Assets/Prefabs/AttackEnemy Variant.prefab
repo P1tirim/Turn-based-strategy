@@ -89,7 +89,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7790366347254455987, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
       propertyPath: m_TagString
-      value: ParticleEnemy
+      value: ParticleAttack
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bff88c93b76025349a1e1aada5a05672, type: 3}
