@@ -12,6 +12,9 @@ public class Character : Motion
 
     Animator animator;
 
+    public int health = 15;
+    public int damage = 5;
+
     UnityEngine.AI.NavMeshAgent agent;
     RaycastHit hit;
 
@@ -34,6 +37,8 @@ public class Character : Motion
         character.obj = this.gameObject;
         character.currentPositionX = 2;
         character.currentPositionY = 4;
+        character.health = health;
+        character.damage = damage;
         Global.listCharactersInGame.Insert(0, character);
 
         obj = cells.transform;

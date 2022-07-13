@@ -127,14 +127,14 @@ public class Cells : MonoBehaviour
                 }
                 
             }
-            if (hit.transform.gameObject.tag == "ParticleMove")
+            if (hit.transform.gameObject.tag == "ParticleMove" && Global.currentPerson.obj.tag == "Player")
             {
                 var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
                 main.startColor = Color.green;
 
                 lastObj = hit.transform.gameObject;
             }
-            if(hit.transform.gameObject.tag == "ParticleAttack")
+            if(hit.transform.gameObject.tag == "ParticleAttack" && Global.currentPerson.obj.tag == "Player")
             {
                 var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
                 main.startColor = Color.red;

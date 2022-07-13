@@ -12,6 +12,9 @@ public class Enemy : Motion
 
     Animator animator;
 
+    public int health = 10;
+    public int damage = 2;
+
     public int startPositionX = 2;
     public int startPositionY = 2;
 
@@ -40,6 +43,8 @@ public class Enemy : Motion
         character.obj = this.gameObject;
         character.currentPositionX = startPositionX;
         character.currentPositionY = startPositionY;
+        character.health = health;
+        character.damage = damage;
         Global.listCharactersInGame.Add(character);
 
         obj = cells.transform;
@@ -67,7 +72,7 @@ public class Enemy : Motion
     IEnumerator wait()
     {
         Global.first = false;
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
         DeterminingNearestPlayer();
     }
 

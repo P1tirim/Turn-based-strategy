@@ -5040,6 +5040,8 @@ MonoBehaviour:
   - {fileID: 466053967}
   cells: {fileID: 1404579789}
   gameManager: {fileID: 434726642}
+  health: 15
+  damage: 5
 --- !u!195 &939099205
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -9576,6 +9578,8 @@ MonoBehaviour:
   - {fileID: 0}
   cells: {fileID: 1404579789}
   gameManager: {fileID: 434726642}
+  health: 10
+  damage: 3
   startPositionX: 2
   startPositionY: 0
 --- !u!1 &1886576146

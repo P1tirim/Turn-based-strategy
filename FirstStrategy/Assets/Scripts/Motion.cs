@@ -320,12 +320,45 @@ public class Motion : MonoBehaviour
         turnAndMove = false;
         Turn(animator, agent, obj);
         animator.SetTrigger("Attack");
-        StartCoroutine(waitAttack(linkGameManager));
+        StartCoroutine(waitAttack(linkGameManager, obj, animator));
     }
 
-    IEnumerator waitAttack(GameManager linkGameManager)
+    IEnumerator waitAttack(GameManager linkGameManager, Transform obj, Animator animator)
     {
-        yield return new WaitForSeconds(1.2f);
+        yield return new WaitForSeconds(0.93f);
+        TakeDamage(obj, animator);
+        yield return new WaitForSeconds(4f);
         linkGameManager.NextPerson();
+    }
+
+    //-health
+    void TakeDamage(Transform obj, Animator animator)
+    {
+        for(int i = 0; i < Global.listCharactersInGame.Count; i++)
+        {
+            if (Global.listCharactersInGame[i].currentCell.name == obj.parent.name)
+            {
+                Global.listCharactersInGame[i].health -= Global.currentPerson.damage;
+                if (Global.listCharactersInGame[i].health <= 0)
+                {
+                    int index = i;
+                    Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("Death");
+                    StartCoroutine(waitDeath(index));
+
+                }
+                else
+                {
+                    Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("TakeDamage");
+                }
+                break;
+            }
+        }
+    }
+
+    IEnumerator waitDeath(int index)
+    {
+        yield return new WaitForSeconds(4f);
+        Destroy(Global.listCharactersInGame[index].obj);
+        Global.listCharactersInGame.Remove(Global.listCharactersInGame[index]);
     }
 }

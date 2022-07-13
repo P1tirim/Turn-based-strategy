@@ -54,4 +54,6 @@ public class Person
     public int currentPositionX;
     public int currentPositionY;
     public GameObject currentCell;
+    public int health;
+    public int damage;
 }
