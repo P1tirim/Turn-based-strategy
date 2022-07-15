@@ -24,6 +24,7 @@ public class Motion : MonoBehaviour
     public GameObject[] sideForRotation = new GameObject[10];
 
     bool turnAndMove = false;
+    bool turn = true;
 
     // Start is called before the first frame update
     void Start()
@@ -52,12 +53,9 @@ public class Motion : MonoBehaviour
             }
             else if (obj.transform.gameObject.tag == "ParticleAttack" && click)
             {
-                Attack(animator, linkGameManager, agent, obj);
+                Attack(animator, linkGameManager, agent, obj, linkCells);
             }
         }
-        
-            
-        
         
         if (agent.remainingDistance <= agent.stoppingDistance && move && !agent.pathPending)
         {
@@ -67,8 +65,10 @@ public class Motion : MonoBehaviour
             move = false;
             animator.SetFloat("Blend", 0);
             transform.position = agent.nextPosition;
+            Global.currentPerson.haveMove = false;
+            Global.first = true;
             linkCells.ChangeCurrentPosition(obj);
-            linkGameManager.NextPerson();
+            
 
         }else if(agent.remainingDistance > agent.stoppingDistance && move && animator.GetCurrentAnimatorStateInfo(0).IsName("Blend"))
         {
@@ -101,6 +101,7 @@ public class Motion : MonoBehaviour
             else if (side == "east")
             {
                 Debug.Log("East1");
+                turn = false;
                 if (turnAndMove)
                 {
                     move = true;
@@ -161,6 +162,7 @@ public class Motion : MonoBehaviour
             else
             {
                 Debug.Log("West2");
+                turn = false;
                 if (turnAndMove)
                 {
                     move = true;
@@ -176,6 +178,7 @@ public class Motion : MonoBehaviour
             if (side == "nord")
             {
                 Debug.Log("North3");
+                turn = false;
                 if (turnAndMove)
                 {
                     move = true;
@@ -236,6 +239,7 @@ public class Motion : MonoBehaviour
             else if (side == "south")
             {
                 Debug.Log("South4");
+                turn = false;
                 if (turnAndMove)
                 {
                     move = true;
@@ -315,24 +319,31 @@ public class Motion : MonoBehaviour
 
 
 
-    public void Attack(Animator animator, GameManager linkGameManager, UnityEngine.AI.NavMeshAgent agent, Transform obj)
+    public void Attack(Animator animator, GameManager linkGameManager, UnityEngine.AI.NavMeshAgent agent, Transform obj, Cells linkCells)
     {
         turnAndMove = false;
         Turn(animator, agent, obj);
         animator.SetTrigger("Attack");
-        StartCoroutine(waitAttack(linkGameManager, obj, animator));
+        StartCoroutine(waitAttack(linkGameManager, obj, animator, linkCells));
     }
 
-    IEnumerator waitAttack(GameManager linkGameManager, Transform obj, Animator animator)
+    IEnumerator waitAttack(GameManager linkGameManager, Transform obj, Animator animator, Cells linkCells)
     {
-        yield return new WaitForSeconds(0.93f);
-        TakeDamage(obj, animator);
-        yield return new WaitForSeconds(4f);
-        linkGameManager.NextPerson();
+        if (!turn)
+        {
+            yield return new WaitForSeconds(0.93f);
+        }
+        else
+        {
+            yield return new WaitForSeconds(2.5f);
+        }
+        turn = true;
+        TakeDamage(obj, animator, linkCells);
+     
     }
 
     //-health
-    void TakeDamage(Transform obj, Animator animator)
+    void TakeDamage(Transform obj, Animator animator, Cells linkCells)
     {
         for(int i = 0; i < Global.listCharactersInGame.Count; i++)
         {
@@ -343,22 +354,38 @@ public class Motion : MonoBehaviour
                 {
                     int index = i;
                     Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("Death");
-                    StartCoroutine(waitDeath(index));
+                    StartCoroutine(waitDeath(index, linkCells));
 
                 }
                 else
                 {
                     Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("TakeDamage");
+                    StartCoroutine(waitTakeDamage(linkCells));
                 }
                 break;
             }
         }
     }
 
-    IEnumerator waitDeath(int index)
+    IEnumerator waitDeath(int index, Cells linkCells)
     {
-        yield return new WaitForSeconds(4f);
-        Destroy(Global.listCharactersInGame[index].obj);
+        GameObject destroy = Global.listCharactersInGame[index].obj;
         Global.listCharactersInGame.Remove(Global.listCharactersInGame[index]);
+        Global.currentPerson.haveAttack = false;
+        Global.first = true;
+        Destroy(destroy.GetComponent<UnityEngine.AI.NavMeshAgent>());
+        linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
+        yield return new WaitForSeconds(4f);
+        Destroy(destroy);
+        
+        
+    }
+
+    IEnumerator waitTakeDamage(Cells linkCells)
+    {
+        yield return new WaitForSeconds(1);
+        Global.currentPerson.haveAttack = false;
+        Global.first = true;
+        linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 }

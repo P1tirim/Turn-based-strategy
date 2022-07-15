@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
         Person item = Global.listCharactersInGame[0];
         Global.listCharactersInGame.Remove(item);
         Global.listCharactersInGame.Add(item);
+        Global.currentPerson.haveMove = true;
+        Global.currentPerson.haveAttack = true;
         Global.currentPerson = Global.listCharactersInGame[0];
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
@@ -56,4 +58,6 @@ public class Person
     public GameObject currentCell;
     public int health;
     public int damage;
+    public bool haveMove = true;
+    public bool haveAttack = true;
 }

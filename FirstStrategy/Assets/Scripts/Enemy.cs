@@ -125,6 +125,7 @@ public class Enemy : Motion
         if(particle == null)
         {
             obj = null;
+            linkGameManager.NextPerson();
         }
         else
         {

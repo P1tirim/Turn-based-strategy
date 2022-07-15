@@ -71,6 +71,7 @@ public class Cells : MonoBehaviour
                 if (currentPositionX == i && currentPositionY == j) continue;
                 if((Mathf.Abs(currentPositionX-i) <= moveSpeed && Mathf.Abs(currentPositionY-j) == 0) || (Mathf.Abs(currentPositionX - i) == 0 && Mathf.Abs(currentPositionY - j) <= moveSpeed))
                 {
+                    newParticle = null;
                     bool spawn = false;
                     GameObject cell = Global.cells[i, j];
                     Vector3 vector;
@@ -79,7 +80,7 @@ public class Cells : MonoBehaviour
                     vector.z = cell.transform.position.z;
                     for(int k = 0; k < Global.listCharactersInGame.Count; k++)
                     {
-                        if (Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
+                        if (Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell && Global.currentPerson.haveAttack)
                         {
                             newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                             spawn = true;
@@ -89,7 +90,7 @@ public class Cells : MonoBehaviour
                             spawn = true;
 
                         }
-                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell)
+                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell && Global.currentPerson.haveAttack)
                         {
                             newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                             spawn = true;
@@ -98,13 +99,29 @@ public class Cells : MonoBehaviour
                         else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
                         {
                             spawn = true;
+                        }else if(Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell && !Global.currentPerson.haveAttack)
+                        {
+                            spawn = true;
                         }
-                        
+                        else if (Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell && !Global.currentPerson.haveAttack)
+                        {
+                            spawn = true;
+                        }
+
+
                     }
-                    if(spawn == false) newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
-                    Global.listParticles.Add(newParticle as GameObject);
+                    if(spawn == false && Global.currentPerson.haveMove) newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                    
+                    if(newParticle != null) Global.listParticles.Add(newParticle as GameObject);
+
+                    
                 }
             }
+        }
+
+        if (Global.listParticles.Count == 0)
+        {
+            linkGameManager.NextPerson();
         }
     }
  
@@ -153,11 +170,12 @@ public class Cells : MonoBehaviour
          Global.currentPerson.currentCell = Global.cells[Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY];
 
         for (int i = 0; i < Global.listParticles.Count; i++)
-         {
+        {
             Destroy(Global.listParticles[i]);
         }
         Global.listParticles.Clear();
 
+        SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
     }
 
