@@ -15,6 +15,9 @@ public class Character : Motion
     public int health = 15;
     public int damage = 5;
 
+    public int startPositionX = 2;
+    public int startPositionY = 3;
+
     UnityEngine.AI.NavMeshAgent agent;
     RaycastHit hit;
 
@@ -35,8 +38,8 @@ public class Character : Motion
         //Create new character
         Person character = new Person();
         character.obj = this.gameObject;
-        character.currentPositionX = 2;
-        character.currentPositionY = 4;
+        character.currentPositionX = startPositionX;
+        character.currentPositionY = startPositionY;
         character.health = health;
         character.damage = damage;
         Global.listCharactersInGame.Insert(0, character);

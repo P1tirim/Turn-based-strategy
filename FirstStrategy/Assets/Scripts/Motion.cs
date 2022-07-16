@@ -335,7 +335,7 @@ public class Motion : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(2.5f);
+            yield return new WaitForSeconds(3f);
         }
         turn = true;
         TakeDamage(obj, animator, linkCells);

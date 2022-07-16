@@ -1,0 +1,56 @@
+# Aspose.3D Wavefront OBJ Exporter
+# Copyright 2004-2022 Aspose Pty Ltd.
+# File created: 07/15/2022 10:21:40
+
+newmtl Bow_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.11363393813371658 0.11363393813371658 0.11363393813371658
+	Ns 13.13636398315429688
+	map_Kd Bow_DIFF.jpg
+newmtl Arrow_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 0 0 0
+	Ns 20
+	map_Kd Arrow_DIFF.png
+newmtl Akai_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.20000000298023224 0.20000000298023224 0.20000000298023224
+	Ns 5
+	map_Kd Erika_Archer_Clothes_diffuse.png
+newmtl EyeSpec_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 1 1 1
+	Ns 51.41880416870117184
+	map_Kd FemaleFitA_Body_diffuse.png
+newmtl Lashes_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	map_Kd FemaleFitA_Body_diffuse.png
+newmtl Body_MAT
+	Ka 0 0 0
+	Kd 1 1 1
+	d 1
+	Tr 0
+	illum 2
+	Ks 0.29913786053657532 0.29913786053657532 0.29913786053657532
+	Ns 6.31179094314575196
+	map_Kd FemaleFitA_Body_diffuse.png
