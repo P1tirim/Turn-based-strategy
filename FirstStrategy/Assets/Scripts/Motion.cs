@@ -86,180 +86,352 @@ public class Motion : MonoBehaviour
         string[] xy = obj.parent.name.Split(new char[] { ' ' });
 
         //turn depending on the side of the world the character is looking at
-        if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == 1)
+        if (Global.currentPerson.rangeAttack > 1)
         {
-            if (side == "nord")
+            if(Global.currentPerson.currentPositionY - int.Parse(xy[1]) > 0)
             {
-                animator.SetTrigger("Turn right");
-                Debug.Log("North1");
-                if (turnAndMove)
+                if(side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    Debug.Log("nord1");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.transform.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
                 }
-                
-            }
-            else if (side == "east")
-            {
-                Debug.Log("East1");
-                turn = false;
-                if (turnAndMove)
+                else if (side == "east")
                 {
-                    move = true;
-                    agent.destination = obj.transform.position;
-                    animator.SetBool("move", true);
-                    agent.updateRotation = true;
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("east1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
-            }
-            else if (side == "south")
-            {
-                animator.SetTrigger("Turn left");
-                Debug.Log("South1");
-                if (turnAndMove)
+                else if(side == "south")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("south1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else
+                {
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("west1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+            }else if(Global.currentPerson.currentPositionY - int.Parse(xy[1]) < 0)
+            {
+                if (side == "nord")
+                {
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("nord2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "east")
+                {
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("east2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "south")
+                {
+                    Debug.Log("south2");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.transform.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
+                }
+                else
+                {
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("west2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+            }else if(Global.currentPerson.currentPositionX - int.Parse(xy[0]) > 0)
+            {
+                if (side == "nord")
+                {
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("nord3");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "east")
+                {
+                    Debug.Log("east3");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.transform.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
+                }
+                else if (side == "south")
+                {
+                    Debug.Log("south3");
+                    animator.SetTrigger("Turn left");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else
+                {
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("west3");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
             }
             else
             {
-                animator.SetTrigger("Turn back");
-                Debug.Log("West1");
-                if(turnAndMove)
+                if (side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("nord4");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "east")
+                {
+                    Debug.Log("east4");
+                    animator.SetTrigger("Turn back");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "south")
+                {
+                    Debug.Log("south4");
+                    animator.SetTrigger("Turn right");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else
+                {
+                    Debug.Log("west4");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.transform.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
                 }
             }
-            
+
         }
-        else if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == -1)
+        else
         {
-            if (side == "nord")
+            if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == 1)
             {
-                animator.SetTrigger("Turn left");
-                Debug.Log("North2");
-                if (turnAndMove)
+                if (side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("North1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+
                 }
-            }
-            else if (side == "east")
-            {
-                animator.SetTrigger("Turn back");
-                Debug.Log("East2");
-                if (turnAndMove)
+                else if (side == "east")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    Debug.Log("East1");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.transform.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
                 }
-            }
-            else if (side == "south")
-            {
-                animator.SetTrigger("Turn right");
-                Debug.Log("South2");
-                if (turnAndMove)
+                else if (side == "south")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("South1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
-            }
-            else
-            {
-                Debug.Log("West2");
-                turn = false;
-                if (turnAndMove)
+                else
                 {
-                    move = true;
-                    agent.destination = obj.position;
-                    animator.SetBool("move", true);
-                    agent.updateRotation = true;
-                }   
-            }
-            
-        }
-        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == 1)
-        {
-            if (side == "nord")
-            {
-                Debug.Log("North3");
-                turn = false;
-                if (turnAndMove)
-                {
-                    move = true;
-                    agent.destination = obj.position;
-                    animator.SetBool("move", true);
-                    agent.updateRotation = true;
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("West1");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
+
             }
-            else if (side == "east")
+            else if (Global.currentPerson.currentPositionX - int.Parse(xy[0]) == -1)
             {
-                animator.SetTrigger("Turn left");
-                Debug.Log("East3");
-                if (turnAndMove)
+                if (side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("North2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
+                else if (side == "east")
+                {
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("East2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "south")
+                {
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("South2");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else
+                {
+                    Debug.Log("West2");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
+                }
+
             }
-            else if (side == "south")
+            else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == 1)
             {
-                animator.SetTrigger("Turn back");
-                Debug.Log("South3");
-                if (turnAndMove)
+                if (side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    Debug.Log("North3");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
                 }
+                else if (side == "east")
+                {
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("East3");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else if (side == "south")
+                {
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("South3");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+                else
+                {
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("West3");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
+                }
+
             }
-            else
+            else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == -1)
             {
-                animator.SetTrigger("Turn right");
-                Debug.Log("West3");
-                if (turnAndMove)
+                if (side == "nord")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn back");
+                    Debug.Log("North4");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
-            }
-            
-        }
-        else if (Global.currentPerson.currentPositionY - int.Parse(xy[1]) == -1)
-        {
-            if (side == "nord")
-            {
-                animator.SetTrigger("Turn back");
-                Debug.Log("North4");
-                if (turnAndMove)
+                else if (side == "east")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    animator.SetTrigger("Turn right");
+                    Debug.Log("East4");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
-            }
-            else if (side == "east")
-            {
-                animator.SetTrigger("Turn right");
-                Debug.Log("East4");
-                if (turnAndMove)
+                else if (side == "south")
                 {
-                    StartCoroutine(wait(agent, animator, obj));
+                    Debug.Log("South4");
+                    turn = false;
+                    if (turnAndMove)
+                    {
+                        move = true;
+                        agent.destination = obj.position;
+                        animator.SetBool("move", true);
+                        agent.updateRotation = true;
+                    }
                 }
-            }
-            else if (side == "south")
-            {
-                Debug.Log("South4");
-                turn = false;
-                if (turnAndMove)
+                else
                 {
-                    move = true;
-                    agent.destination = obj.position;
-                    animator.SetBool("move", true);
-                    agent.updateRotation = true;
+                    animator.SetTrigger("Turn left");
+                    Debug.Log("West4");
+                    if (turnAndMove)
+                    {
+                        StartCoroutine(wait(agent, animator, obj));
+                    }
                 }
+
             }
-            else
-            {
-                animator.SetTrigger("Turn left");
-                Debug.Log("West4");
-                if (turnAndMove)
-                {
-                    StartCoroutine(wait(agent, animator, obj));
-                }
-            }
-            
-        }
-        
+        } 
     }
 
     IEnumerator wait(UnityEngine.AI.NavMeshAgent agent, Animator animator, Transform obj)

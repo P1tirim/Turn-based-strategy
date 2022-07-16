@@ -58,6 +58,7 @@ public class Person
     public GameObject currentCell;
     public int health;
     public int damage;
+    public int rangeAttack;
     public bool haveMove = true;
     public bool haveAttack = true;
 }

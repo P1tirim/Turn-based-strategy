@@ -4602,7 +4602,29 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: bca35e620493b8042b0841bebbc8dc21, type: 3}
   m_PrefabInstance: {fileID: 709474885}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &851555565
+--- !u!195 &851555566
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851555562}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.3
+  m_Speed: 4
+  m_Acceleration: 2
+  avoidancePriority: 50
+  m_AngularSpeed: 1000000
+  m_StoppingDistance: 0.3
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &851555567
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4632,31 +4654,10 @@ MonoBehaviour:
   cells: {fileID: 1404579789}
   gameManager: {fileID: 434726642}
   health: 10
-  damage: 6
+  damage: 3
+  rangeAttack: 10
   startPositionX: 1
   startPositionY: 4
---- !u!195 &851555566
-NavMeshAgent:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851555562}
-  m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.3
-  m_Speed: 4
-  m_Acceleration: 2
-  avoidancePriority: 50
-  m_AngularSpeed: 1000000
-  m_StoppingDistance: 0.3
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 2
-  m_BaseOffset: 0
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
 --- !u!1 &858958266
 GameObject:
   m_ObjectHideFlags: 0
@@ -5243,6 +5244,7 @@ MonoBehaviour:
   gameManager: {fileID: 434726642}
   health: 15
   damage: 5
+  rangeAttack: 1
   startPositionX: 2
   startPositionY: 3
 --- !u!195 &939099205
@@ -9783,6 +9785,7 @@ MonoBehaviour:
   gameManager: {fileID: 434726642}
   health: 10
   damage: 3
+  rangeAttack: 1
   startPositionX: 2
   startPositionY: 0
 --- !u!1 &1886576146

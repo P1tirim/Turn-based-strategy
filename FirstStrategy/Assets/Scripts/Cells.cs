@@ -41,17 +41,15 @@ public class Cells : MonoBehaviour
                 child++;
             }
         }
+        StartCoroutine(wait());
+    }
 
-        for(int i = 0; i < Global.listCharactersInGame.Count; i++)
+    IEnumerator wait()
+    {
+        yield return new WaitForEndOfFrame();
+        for (int i = 0; i < Global.listCharactersInGame.Count; i++)
         {
-            if (Global.listCharactersInGame[i].obj.tag == "Enemy")
-            {
-                Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];
-            }
-            else
-            {
-                Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];
-            }
+            Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];
         }
         linkGameManager.spawn();
     }
@@ -68,7 +66,7 @@ public class Cells : MonoBehaviour
         {
             for (int j = 0; j < 5; j++)
             {
-                if (currentPositionX == i && currentPositionY == j) continue;
+                if (currentPositionX == i && currentPositionY == j) continue;              
                 if((Mathf.Abs(currentPositionX-i) <= moveSpeed && Mathf.Abs(currentPositionY-j) == 0) || (Mathf.Abs(currentPositionX - i) == 0 && Mathf.Abs(currentPositionY - j) <= moveSpeed))
                 {
                     newParticle = null;
@@ -80,9 +78,8 @@ public class Cells : MonoBehaviour
                     vector.z = cell.transform.position.z;
                     for(int k = 0; k < Global.listCharactersInGame.Count; k++)
                     {
-                        if (Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell && Global.currentPerson.haveAttack)
+                        if (Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
                         {
-                            newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                             spawn = true;
 
                         }else if(Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell)
@@ -90,24 +87,15 @@ public class Cells : MonoBehaviour
                             spawn = true;
 
                         }
-                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell && Global.currentPerson.haveAttack)
+                        else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell)
                         {
-                            newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
                             spawn = true;
 
                         }
                         else if(Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell)
                         {
                             spawn = true;
-                        }else if(Global.listCharactersInGame[k].obj.tag == "Enemy" && Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[k].currentCell == cell && !Global.currentPerson.haveAttack)
-                        {
-                            spawn = true;
                         }
-                        else if (Global.listCharactersInGame[k].obj.tag == "Player" && Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[k].currentCell == cell && !Global.currentPerson.haveAttack)
-                        {
-                            spawn = true;
-                        }
-
 
                     }
                     if(spawn == false && Global.currentPerson.haveMove) newParticle = Instantiate(particleMove, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
@@ -116,6 +104,23 @@ public class Cells : MonoBehaviour
 
                     
                 }
+            }
+        }
+
+        for (int l = 0; l < Global.listCharactersInGame.Count; l++)
+        {
+            int ch = Mathf.Abs(Global.currentPerson.currentPositionX - Global.listCharactersInGame[l].currentPositionX) + Mathf.Abs(Global.currentPerson.currentPositionY - Global.listCharactersInGame[l].currentPositionY);
+            if (((Global.currentPerson.obj.tag == "Player" && Global.listCharactersInGame[l].obj.tag == "Enemy") || (Global.currentPerson.obj.tag == "Enemy" && Global.listCharactersInGame[l].obj.tag == "Player")) && ch <= Global.currentPerson.rangeAttack && Global.currentPerson.haveAttack)
+            {
+                newParticle = null;
+                GameObject cell = Global.cells[Global.listCharactersInGame[l].currentPositionX, Global.listCharactersInGame[l].currentPositionY];
+                Vector3 vector;
+                vector.x = cell.transform.position.x + 2f;
+                vector.y = cell.transform.position.y;
+                vector.z = cell.transform.position.z;
+
+                newParticle = Instantiate(particleEnemy, vector, Quaternion.Euler(-90, 0, 0), cell.transform);
+                if (newParticle != null) Global.listParticles.Add(newParticle as GameObject);
             }
         }
 

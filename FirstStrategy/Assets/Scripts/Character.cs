@@ -14,6 +14,7 @@ public class Character : Motion
 
     public int health = 15;
     public int damage = 5;
+    public int rangeAttack = 1;
 
     public int startPositionX = 2;
     public int startPositionY = 3;
@@ -42,6 +43,7 @@ public class Character : Motion
         character.currentPositionY = startPositionY;
         character.health = health;
         character.damage = damage;
+        character.rangeAttack = rangeAttack;
         Global.listCharactersInGame.Insert(0, character);
 
         obj = cells.transform;
@@ -50,24 +52,28 @@ public class Character : Motion
     // Update is called once per frame
     void Update()
     {
-        if (Global.currentPerson.obj == this.gameObject)
+        if(Global.currentPerson != null)
         {
-            if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
+            if (Global.currentPerson.obj == this.gameObject)
             {
-                Debug.Log(Global.currentPerson.obj.name);
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-                if (Physics.Raycast(ray, out hit))
+                if (Input.GetMouseButtonDown(0) && animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))
                 {
-                    obj = hit.transform;
-                    click = true;
-                    walk(animator, linkGameManager, linkCells, agent, obj, click);
-                    click = false;
-                }
-            }
-            walk(animator, linkGameManager, linkCells, agent, obj, click);
+                    Debug.Log(Global.currentPerson.obj.name);
+                    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
+                    if (Physics.Raycast(ray, out hit))
+                    {
+                        obj = hit.transform;
+                        click = true;
+                        walk(animator, linkGameManager, linkCells, agent, obj, click);
+                        click = false;
+                    }
+                }
+                walk(animator, linkGameManager, linkCells, agent, obj, click);
+
+            }
         }
+        
         
         
     }

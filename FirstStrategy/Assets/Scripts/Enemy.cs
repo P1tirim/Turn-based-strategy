@@ -14,6 +14,7 @@ public class Enemy : Motion
 
     public int health = 10;
     public int damage = 2;
+    public int rangeAttack = 1;
 
     public int startPositionX = 2;
     public int startPositionY = 2;
@@ -45,6 +46,7 @@ public class Enemy : Motion
         character.currentPositionY = startPositionY;
         character.health = health;
         character.damage = damage;
+        character.rangeAttack = rangeAttack;
         Global.listCharactersInGame.Add(character);
 
         obj = cells.transform;
@@ -53,20 +55,24 @@ public class Enemy : Motion
     // Update is called once per frame
     void Update()
     {
-        if(Global.currentPerson.obj == this.gameObject)
+        if(Global.currentPerson != null)
         {
-            if (Global.first)
+            if (Global.currentPerson.obj == this.gameObject)
             {
-                StartCoroutine(wait());
+                if (Global.first)
+                {
+                    StartCoroutine(wait());
+                }
+                else
+                {
+
+                    walk(animator, linkGameManager, linkCells, agent, obj, click);
+                }
+
+
             }
-            else
-            {
-                
-                walk(animator, linkGameManager, linkCells, agent, obj, click);
-            }
-            
-            
         }
+        
     }
 
     IEnumerator wait()
