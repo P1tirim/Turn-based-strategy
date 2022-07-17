@@ -126,7 +126,10 @@ public class Enemy : Motion
                 }
                 if (i == listParticlesMove.Count) break;
             }
-            if(listParticlesMove.Count > 0) particle = listParticlesMove[Random.Range(0, listParticlesAttack.Count)];
+            if(Global.currentPerson.rangeAttack > 1 && Global.currentPerson.haveAttack == false)
+            {
+                particle = null;
+            }else if(listParticlesMove.Count > 0) particle = listParticlesMove[Random.Range(0, listParticlesAttack.Count)];
         }
         if(particle == null)
         {
