@@ -19,6 +19,9 @@ public class Character : Motion
     public int startPositionX = 2;
     public int startPositionY = 3;
 
+    public GameObject arrow;
+    public GameObject hand;
+
     UnityEngine.AI.NavMeshAgent agent;
     RaycastHit hit;
 
@@ -71,6 +74,10 @@ public class Character : Motion
                 }
                 walk(animator, linkGameManager, linkCells, agent, obj, click);
 
+                if (Input.GetKeyDown("space"))
+                {
+                    linkGameManager.NextPerson();
+                }
             }
         }
         
