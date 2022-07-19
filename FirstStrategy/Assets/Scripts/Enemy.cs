@@ -6,14 +6,15 @@ public class Enemy : Motion
 {
     public GameObject cells;
     public GameObject gameManager;
+    public GameObject healthBar;
 
     Cells linkCells;
     GameManager linkGameManager;
 
     Animator animator;
 
-    public int health = 10;
-    public int damage = 2;
+    public float healthMax = 10;
+    public float damage = 2;
     public int rangeAttack = 1;
 
     public int startPositionX = 2;
@@ -44,7 +45,9 @@ public class Enemy : Motion
         character.obj = this.gameObject;
         character.currentPositionX = startPositionX;
         character.currentPositionY = startPositionY;
-        character.health = health;
+        character.healthMax = healthMax;
+        character.healthCurrent = healthMax;
+        character.healthBar = healthBar;
         character.damage = damage;
         character.rangeAttack = rangeAttack;
         Global.listCharactersInGame.Add(character);
@@ -139,6 +142,15 @@ public class Enemy : Motion
         else
         {
             obj = particle.transform;
+            GameObject cell = obj.transform.parent.gameObject;
+            for (int i = 0; i < Global.listCharactersInGame.Count; i++)
+            {
+                if (Global.listCharactersInGame[i].currentCell == cell)
+                {
+                    Global.listCharactersInGame[i].healthBar.SetActive(true);
+                    break;
+                }
+            }
         }
         
         click = true;        

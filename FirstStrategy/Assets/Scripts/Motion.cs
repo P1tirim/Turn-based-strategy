@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Motion : MonoBehaviour
 {
-    
 
     public GameObject nord;
     public GameObject south;
@@ -21,7 +20,6 @@ public class Motion : MonoBehaviour
 
     bool move = false;
 
-    public GameObject[] sideForRotation = new GameObject[10];
 
     bool turnAndMove = false;
     bool turn = true;
@@ -521,18 +519,21 @@ public class Motion : MonoBehaviour
         {
             if (Global.listCharactersInGame[i].currentCell.name == obj.parent.name)
             {
-                Global.listCharactersInGame[i].health -= Global.currentPerson.damage;
-                if (Global.listCharactersInGame[i].health <= 0)
+                Global.listCharactersInGame[i].healthCurrent -= Global.currentPerson.damage;
+                if (Global.listCharactersInGame[i].healthCurrent <= 0)
                 {
                     int index = i;
                     Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("Death");
+                    Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
                     StartCoroutine(waitDeath(index, linkCells));
 
                 }
                 else
                 {
+                    int index = i;
                     Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("TakeDamage");
-                    StartCoroutine(waitTakeDamage(linkCells));
+                    Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
+                    StartCoroutine(waitTakeDamage(index ,linkCells));
                 }
                 break;
             }
@@ -553,11 +554,12 @@ public class Motion : MonoBehaviour
         
     }
 
-    IEnumerator waitTakeDamage(Cells linkCells)
+    IEnumerator waitTakeDamage(int index ,Cells linkCells)
     {
         yield return new WaitForSeconds(1);
         Global.currentPerson.haveAttack = false;
         Global.first = true;
+        Global.listCharactersInGame[index].healthBar.SetActive(false);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 }

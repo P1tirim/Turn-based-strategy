@@ -2,25 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : Motion
+public class Player : Motion
 {
     public GameObject cells;
     public GameObject gameManager;
+    public GameObject healthBar;
 
     Cells linkCells;
     GameManager linkGameManager;
 
     Animator animator;
 
-    public int health = 15;
-    public int damage = 5;
+    public float healthMax = 15;
+    public float damage = 5;
     public int rangeAttack = 1;
 
     public int startPositionX = 2;
     public int startPositionY = 3;
 
-    public GameObject arrow;
-    public GameObject hand;
 
     UnityEngine.AI.NavMeshAgent agent;
     RaycastHit hit;
@@ -35,6 +34,7 @@ public class Character : Motion
         linkCells = cells.GetComponent<Cells>();
         linkGameManager = gameManager.GetComponent<GameManager>();
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        
 
         agent.updatePosition = false;
         
@@ -44,7 +44,9 @@ public class Character : Motion
         character.obj = this.gameObject;
         character.currentPositionX = startPositionX;
         character.currentPositionY = startPositionY;
-        character.health = health;
+        character.healthMax = healthMax;
+        character.healthCurrent = healthMax;
+        character.healthBar = healthBar;
         character.damage = damage;
         character.rangeAttack = rangeAttack;
         Global.listCharactersInGame.Insert(0, character);

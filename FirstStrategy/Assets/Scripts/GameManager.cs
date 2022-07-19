@@ -38,7 +38,9 @@ public class GameManager : MonoBehaviour
         Global.listCharactersInGame.Add(item);
         Global.currentPerson.haveMove = true;
         Global.currentPerson.haveAttack = true;
+        Global.currentPerson.healthBar.SetActive(false);
         Global.currentPerson = Global.listCharactersInGame[0];
+        Global.currentPerson.healthBar.SetActive(true);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
     public void spawn()
     {
         Global.currentPerson = Global.listCharactersInGame[0];
+        Global.currentPerson.healthBar.SetActive(true);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 }
@@ -56,8 +59,10 @@ public class Person
     public int currentPositionX;
     public int currentPositionY;
     public GameObject currentCell;
-    public int health;
-    public int damage;
+    public float healthMax;
+    public float healthCurrent;
+    public GameObject healthBar;
+    public float damage;
     public int rangeAttack;
     public bool haveMove = true;
     public bool haveAttack = true;

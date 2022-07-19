@@ -146,6 +146,15 @@ public class Cells : MonoBehaviour
                 }else if(lastObj.tag == "ParticleAttack")
                 {
                     main.startColor = Color.yellow;
+                    GameObject cell = lastObj.transform.parent.gameObject;
+                    for (int i = 0; i < Global.listCharactersInGame.Count; i++)
+                    {
+                        if (Global.listCharactersInGame[i].currentCell == cell)
+                        {
+                            Global.listCharactersInGame[i].healthBar.SetActive(false);
+                            break;
+                        }
+                    }
                 }
                 
             }
@@ -160,7 +169,15 @@ public class Cells : MonoBehaviour
             {
                 var main = hit.transform.gameObject.GetComponent<ParticleSystem>().main;
                 main.startColor = Color.red;
-
+                GameObject cell = hit.transform.parent.gameObject;
+                for (int i = 0; i< Global.listCharactersInGame.Count; i++)
+                {
+                    if (Global.listCharactersInGame[i].currentCell == cell)
+                    {
+                        Global.listCharactersInGame[i].healthBar.SetActive(true);
+                        break;
+                    }
+                }
                 lastObj = hit.transform.gameObject;
             }
         }
