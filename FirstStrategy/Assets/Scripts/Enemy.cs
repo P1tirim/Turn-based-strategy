@@ -16,6 +16,7 @@ public class Enemy : Motion
     public float healthMax = 10;
     public float damage = 2;
     public int rangeAttack = 1;
+    public int initiative = 3;
 
     public int startPositionX = 2;
     public int startPositionY = 2;
@@ -50,6 +51,8 @@ public class Enemy : Motion
         character.healthBar = healthBar;
         character.damage = damage;
         character.rangeAttack = rangeAttack;
+        character.initiative = initiative;
+        character.initiativeInFight = Random.Range(1, 20) + initiative;
         Global.listCharactersInGame.Add(character);
 
         obj = cells.transform;

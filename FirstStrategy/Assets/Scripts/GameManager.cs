@@ -44,9 +44,21 @@ public class GameManager : MonoBehaviour
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 
-    //spawn particles
+    //spawn particles and determining the turn queue with the help of the initiative
     public void spawn()
     {
+        for(int i = 0; i < Global.listCharactersInGame.Count; i++)
+        {
+            for(int j = 0; j < Global.listCharactersInGame.Count - 1; j++)
+            {
+                if (Global.listCharactersInGame[j].initiativeInFight < Global.listCharactersInGame[j + 1].initiativeInFight)
+                {
+                    Person buffer = Global.listCharactersInGame[j];
+                    Global.listCharactersInGame[j] = Global.listCharactersInGame[j + 1];
+                    Global.listCharactersInGame[j + 1] = buffer;
+                }
+            }
+        }
         Global.currentPerson = Global.listCharactersInGame[0];
         Global.currentPerson.healthBar.SetActive(true);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
@@ -64,6 +76,8 @@ public class Person
     public GameObject healthBar;
     public float damage;
     public int rangeAttack;
+    public int initiative;
+    public int initiativeInFight;
     public bool haveMove = true;
     public bool haveAttack = true;
 }

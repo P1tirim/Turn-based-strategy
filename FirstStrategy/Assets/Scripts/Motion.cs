@@ -501,11 +501,13 @@ public class Motion : MonoBehaviour
     {
         if (!turn)
         {
+            Debug.Log("Not turn");
             yield return new WaitForSeconds(0.93f);
         }
         else
         {
-            yield return new WaitForSeconds(3f);
+            Debug.Log("turn");
+            yield return new WaitForSeconds(3.2f);
         }
         turn = true;
         TakeDamage(obj, animator, linkCells);
