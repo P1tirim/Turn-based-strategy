@@ -46,7 +46,7 @@ public class Cells : MonoBehaviour
 
     IEnumerator wait()
     {
-        yield return new WaitForEndOfFrame();
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < Global.listCharactersInGame.Count; i++)
         {
             Global.listCharactersInGame[i].currentCell = Global.cells[Global.listCharactersInGame[i].currentPositionX, Global.listCharactersInGame[i].currentPositionY];

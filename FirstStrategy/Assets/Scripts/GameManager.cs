@@ -8,6 +8,8 @@ public static class Global
     public static List<GameObject> listPositionEnemy = new List<GameObject>();
     public static List<GameObject> listPositionPlayer = new List<GameObject>();
     public static List<GameObject> listParticles = new List<GameObject>();
+    public static List<Weapon> listWeapon = new List<Weapon>();
+    public static List<Armor> listArmor = new List<Armor>();
     public static Person currentPerson;
     public static GameObject[,] cells = new GameObject[5, 5];
     public static bool first = true;
@@ -21,6 +23,8 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         linkCells = cells.GetComponent<Cells>();
+        CreateWeapons();
+        CreateArmor();
     }
 
     // Update is called once per frame
@@ -63,6 +67,50 @@ public class GameManager : MonoBehaviour
         Global.currentPerson.healthBar.SetActive(true);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
+
+    void CreateWeapons()
+    {
+        Weapon weapon = new Weapon();
+
+        
+        weapon.name = "sword";
+        weapon.damage[0] = 1;
+        weapon.damage[1] = 8;
+        weapon.hitProbability = 4;
+        Global.listWeapon.Add(weapon);
+
+        weapon.name = "bow";
+        weapon.damage[0] = 1;
+        weapon.damage[1] = 8;
+        weapon.hitProbability = 4;
+        Global.listWeapon.Add(weapon);
+
+        weapon.name = "special";
+        weapon.damage[0] = 1;
+        weapon.damage[1] = 12;
+        weapon.hitProbability = 4;
+        Global.listWeapon.Add(weapon);
+    }
+
+    void CreateArmor()
+    {
+        Armor armor = new Armor();
+
+        armor.name = "hauberk";
+        armor.armorClass = 18;
+        armor.haveShield = true;
+        Global.listArmor.Add(armor);
+
+        armor.name = "leather";
+        armor.armorClass = 15;
+        armor.haveShield = false;
+        Global.listArmor.Add(armor);
+
+        armor.name = "none";
+        armor.armorClass = 14;
+        armor.haveShield = false;
+        Global.listArmor.Add(armor);
+    }
 }
 //class Characters in game
 public class Person
@@ -74,10 +122,39 @@ public class Person
     public float healthMax;
     public float healthCurrent;
     public GameObject healthBar;
-    public float damage;
+    public Weapon weapon;
+    public Armor armor;
     public int rangeAttack;
     public int initiative;
     public int initiativeInFight;
     public bool haveMove = true;
     public bool haveAttack = true;
+}
+
+public class Weapon
+{
+    public string name;
+    public int[] damage = new int[2];
+    public int hitProbability;
+}
+
+public class Armor
+{
+    public string name;
+    public int armorClass;
+    public bool haveShield;
+}
+
+public enum ChooseWeapon
+{
+    Sword = 0,
+    Bow = 1,
+    Special = 2
+}
+
+public enum ChooseArmor
+{
+    Hauberk = 0,
+    Leather = 1,
+    None = 2
 }

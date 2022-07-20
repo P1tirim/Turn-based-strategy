@@ -5428,8 +5428,10 @@ MonoBehaviour:
   gameManager: {fileID: 434726642}
   healthBar: {fileID: 350594155}
   healthMax: 15
-  damage: 5
+  weapon: 0
+  armor: 0
   rangeAttack: 1
+  initiative: 4
   startPositionX: 2
   startPositionY: 3
 --- !u!195 &939099205
@@ -10416,8 +10418,10 @@ MonoBehaviour:
   gameManager: {fileID: 434726642}
   healthBar: {fileID: 1370691330}
   healthMax: 10
-  damage: 4
+  weapon: 1
+  armor: 1
   rangeAttack: 3
+  initiative: 3
   startPositionX: 4
   startPositionY: 0
 --- !u!4 &1782094396 stripped
@@ -10743,8 +10747,10 @@ MonoBehaviour:
   gameManager: {fileID: 434726642}
   healthBar: {fileID: 1702073489}
   healthMax: 10
-  damage: 3
+  weapon: 2
+  armor: 2
   rangeAttack: 1
+  initiative: 3
   startPositionX: 2
   startPositionY: 1
 --- !u!4 &1844684089 stripped
@@ -12344,6 +12350,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1763801209}
     - target: {fileID: 1227487425531111973, guid: abf3bf07293b9b247b09aa2b1b5d8df8, type: 3}
+      propertyPath: armor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1227487425531111973, guid: abf3bf07293b9b247b09aa2b1b5d8df8, type: 3}
       propertyPath: cells
       value: 
       objectReference: {fileID: 1404579789}
@@ -12351,6 +12361,10 @@ PrefabInstance:
       propertyPath: south
       value: 
       objectReference: {fileID: 1494767331}
+    - target: {fileID: 1227487425531111973, guid: abf3bf07293b9b247b09aa2b1b5d8df8, type: 3}
+      propertyPath: weapon
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1227487425531111973, guid: abf3bf07293b9b247b09aa2b1b5d8df8, type: 3}
       propertyPath: healthBar
       value: 

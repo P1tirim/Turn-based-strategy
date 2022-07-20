@@ -521,22 +521,37 @@ public class Motion : MonoBehaviour
         {
             if (Global.listCharactersInGame[i].currentCell.name == obj.parent.name)
             {
-                Global.listCharactersInGame[i].healthCurrent -= Global.currentPerson.damage;
-                if (Global.listCharactersInGame[i].healthCurrent <= 0)
+                int hit = Random.Range(1, 20);
+                if (hit == 1) break;
+                if(hit + Global.currentPerson.weapon.hitProbability >= Global.listCharactersInGame[i].armor.armorClass)
                 {
-                    int index = i;
-                    Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("Death");
-                    Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
-                    StartCoroutine(waitDeath(index, linkCells));
+                    int damage = Random.Range(Global.currentPerson.weapon.damage[0], Global.currentPerson.weapon.damage[1]);
+                    if (hit == 20) damage += Global.currentPerson.weapon.damage[1];
+                    Global.listCharactersInGame[i].healthCurrent -= damage;
+                    if (Global.listCharactersInGame[i].healthCurrent <= 0)
+                    {
+                        int index = i;
+                        Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("Death");
+                        Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
+                        StartCoroutine(waitDeath(index, linkCells));
 
+                    }
+                    else
+                    {
+                        int index = i;
+                        Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("TakeDamage");
+                        Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
+                        StartCoroutine(waitTakeDamage(index, linkCells));
+                    }
                 }
                 else
                 {
-                    int index = i;
-                    Global.listCharactersInGame[i].obj.GetComponent<Animator>().SetTrigger("TakeDamage");
-                    Global.listCharactersInGame[i].healthBar.GetComponent<HealthBar>().UpdateHealthBar(Global.listCharactersInGame[i].healthCurrent, Global.listCharactersInGame[i].healthMax);
-                    StartCoroutine(waitTakeDamage(index ,linkCells));
+                    Global.currentPerson.haveAttack = false;
+                    Global.first = true;
+                    Global.listCharactersInGame[i].healthBar.SetActive(false);
+                    linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
                 }
+                
                 break;
             }
         }

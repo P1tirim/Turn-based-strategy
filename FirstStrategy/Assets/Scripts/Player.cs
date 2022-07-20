@@ -14,9 +14,12 @@ public class Player : Motion
     Animator animator;
 
     public float healthMax = 15;
-    public float damage = 5;
+    public ChooseWeapon weapon;
+    public ChooseArmor armor;
     public int rangeAttack = 1;
     public int initiative = 4;
+
+    
 
     public int startPositionX = 2;
     public int startPositionY = 3;
@@ -38,8 +41,15 @@ public class Player : Motion
         
 
         agent.updatePosition = false;
-        
 
+        StartCoroutine(wait());
+
+        obj = cells.transform;
+    }
+
+    IEnumerator wait()
+    {
+        yield return new WaitForEndOfFrame();
         //Create new character
         Person character = new Person();
         character.obj = this.gameObject;
@@ -48,13 +58,12 @@ public class Player : Motion
         character.healthMax = healthMax;
         character.healthCurrent = healthMax;
         character.healthBar = healthBar;
-        character.damage = damage;
+        character.weapon = Global.listWeapon[(int)weapon];
+        character.armor = Global.listArmor[(int)armor];
         character.rangeAttack = rangeAttack;
         character.initiative = initiative;
         character.initiativeInFight = Random.Range(1, 20) + initiative;
         Global.listCharactersInGame.Insert(0, character);
-
-        obj = cells.transform;
     }
 
     // Update is called once per frame
