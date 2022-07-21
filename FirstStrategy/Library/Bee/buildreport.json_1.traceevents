@@ -1,0 +1,590 @@
+﻿{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1658405836840403, "dur": 922337203685477580, "ph": "X", "name": "Build ScriptAssemblies", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405836842685, "dur": 26481, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405836869399, "dur": 1307626, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405838177060, "dur": 10281, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405842460444, "dur": 922337203685477580, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405842460763, "dur": 20856, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405842481624, "dur": 1393727, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405843875355, "dur": 16285, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405843892194, "dur": 89, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1658405842525729, "dur":1220, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405842526961, "dur":124, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1658405842527112, "dur":23, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1658405842527141, "dur":589, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1658405842527777, "dur":719, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405842528496, "dur":2, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843851552, "dur":413, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843851965, "dur":59, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852025, "dur":5, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852030, "dur":13, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852043, "dur":3, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852046, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852055, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852057, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852066, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852068, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852077, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852079, "dur":8, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852087, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852089, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852098, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852100, "dur":10, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852110, "dur":1, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852120, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843852124, "dur":1271, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1658405842528875, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842528877, "dur":3459, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842532358, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1658405842532359, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842532404, "dur":3, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1658405842532407, "dur":99, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842532512, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842533490, "dur":3179, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/app.info" }}
+,{ "pid":12345, "tid":1, "ts":1658405842536672, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1658405842536698, "dur":69090, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842605829, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842606134, "dur":897, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":1, "ts":1658405842607057, "dur":46, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1658405842607103, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842607138, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842607148, "dur":1305, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":1, "ts":1658405842608479, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1658405842608506, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842608564, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842608685, "dur":1816, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":1, "ts":1658405842610523, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842610553, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842610596, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842610601, "dur":26252, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842636882, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842636906, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842636944, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842636953, "dur":27171, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842664150, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842664174, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842664211, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842664219, "dur":43145, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842707388, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842707408, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842707442, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842707451, "dur":136913, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842844392, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842844421, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842844462, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842844469, "dur":61695, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842906190, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842906212, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842906252, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842906261, "dur":24469, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842930755, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842930778, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842930816, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842930824, "dur":43499, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842974373, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405842974404, "dur":3730, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842978149, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405842978161, "dur":64399, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843042589, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843042613, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843042655, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843042691, "dur":127973, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843170686, "dur":115144, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843285831, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843285900, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843285909, "dur":5206, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Core.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843291136, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843291158, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843291197, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843291206, "dur":147472, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843438704, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843438729, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843438772, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843438781, "dur":41660, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843480466, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843480490, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843480527, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843480536, "dur":117180, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":1, "ts":1658405843597746, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1658405843597786, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843597822, "dur":1099, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":1, "ts":1658405843598944, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1658405843598972, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843598979, "dur":35593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":1, "ts":1658405843634599, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1658405843634705, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843634714, "dur":3437, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":1, "ts":1658405843638178, "dur":114, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1658405843638293, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843638333, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843638341, "dur":1357, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":1, "ts":1658405843639726, "dur":1566, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1658405843641293, "dur":536, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843641839, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843641849, "dur":1035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":1, "ts":1658405843642910, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1658405843642946, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843642953, "dur":1749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/resources.assets" }}
+,{ "pid":12345, "tid":1, "ts":1658405843644731, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1658405843644760, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843644766, "dur":1332, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/level0" }}
+,{ "pid":12345, "tid":1, "ts":1658405843646119, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1658405843646149, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1658405843646156, "dur":2084, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":1, "ts":1658405843648268, "dur":203279, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842528913, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842528914, "dur":3432, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842532358, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405842532462, "dur":156, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842532622, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842605900, "dur":1210, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405842607136, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405842607211, "dur":59, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842607299, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842607307, "dur":1361, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405842608691, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1658405842608716, "dur":130, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842608853, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842609601, "dur":940, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":2, "ts":1658405842610583, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy.exe" }}
+,{ "pid":12345, "tid":2, "ts":1658405842610609, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842610643, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842610648, "dur":137492, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy.exe" }}
+,{ "pid":12345, "tid":2, "ts":1658405842843265, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405842843299, "dur":142, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842843452, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842843461, "dur":77684, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405842921173, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405842921196, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842921236, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842921244, "dur":54086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405842975358, "dur":35, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405842975394, "dur":118, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842975519, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405842975528, "dur":27380, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843002931, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843002954, "dur":83, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843003045, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843003054, "dur":58752, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843061832, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843061858, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843061900, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843061909, "dur":45642, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843107579, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843107614, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843107683, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843107696, "dur":183434, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843291151, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843291173, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843291210, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843291217, "dur":82889, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843374131, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843374154, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843374192, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843374201, "dur":114041, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843488268, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843488295, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843488336, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843488344, "dur":151377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":2, "ts":1658405843639754, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1658405843639795, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843639802, "dur":4005, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":2, "ts":1658405843643831, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/level0.resS" }}
+,{ "pid":12345, "tid":2, "ts":1658405843643886, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843643893, "dur":958, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/level0.resS" }}
+,{ "pid":12345, "tid":2, "ts":1658405843644871, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1658405843644904, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843644913, "dur":1201, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":2, "ts":1658405843646135, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405843646247, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843646282, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1658405843646287, "dur":1847, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/boot.config" }}
+,{ "pid":12345, "tid":2, "ts":1658405843648156, "dur":203407, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842528959, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842528959, "dur":3388, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842532358, "dur":42, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1658405842532400, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842532482, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842533747, "dur":74578, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":3, "ts":1658405842608742, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1658405842608773, "dur":27, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842608806, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842608868, "dur":4186, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":3, "ts":1658405842613090, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842613116, "dur":985, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842614108, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842614536, "dur":63632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842678194, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842678226, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842678289, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842678298, "dur":166364, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842844685, "dur":134627, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842979314, "dur":43, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842979366, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842979376, "dur":966, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842980369, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405842980392, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842980430, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405842980438, "dur":57049, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843037511, "dur":112, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843037623, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843037667, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843037675, "dur":38132, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843075835, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843075860, "dur":1919, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843077791, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843077801, "dur":37137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843114962, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843114984, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843115024, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843115031, "dur":55563, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843170614, "dur":97238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843267853, "dur":62, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843267926, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843267935, "dur":1373, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Flow.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843269334, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843269360, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843269402, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843269409, "dur":64983, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843334418, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843334440, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843334480, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843334489, "dur":92588, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843427104, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843427129, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843427174, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1658405843427183, "dur":276302, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":3, "ts":1658405843703511, "dur":148039, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842529006, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842529007, "dur":3338, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842532358, "dur":43, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1658405842532402, "dur":138, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842532548, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842605914, "dur":2299, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":4, "ts":1658405842608243, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1658405842608273, "dur":102, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842608382, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842608581, "dur":1401, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1658405842610006, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842610039, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842610078, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842610167, "dur":17845, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842628037, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842628070, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842628107, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842628115, "dur":63306, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842691449, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842691472, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842691514, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842691523, "dur":47636, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842741800, "dur":200, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842742001, "dur":793, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842742823, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842742833, "dur":101929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842844784, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842844807, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842844845, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842844852, "dur":35739, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842880618, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405842880641, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842880680, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405842880689, "dur":172353, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843053065, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843053088, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843053128, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843053135, "dur":25809, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843078967, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843078986, "dur":27, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843079018, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843079024, "dur":31340, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843110388, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843110411, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843110451, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843110460, "dur":32590, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843143073, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843143096, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843143133, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843143140, "dur":51058, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843194224, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843194248, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843194291, "dur":6, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843194305, "dur":68427, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.Antlr3.Runtime.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843262758, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843262784, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843262822, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843262830, "dur":252475, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843515328, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843515349, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843515388, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1658405843515396, "dur":336078, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":4, "ts":1658405843851507, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":4, "ts":1658405843851509, "dur":1, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842529042, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842529043, "dur":3300, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842532358, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1658405842532437, "dur":164, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842532607, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842605991, "dur":2286, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":5, "ts":1658405842608349, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1658405842608380, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842608423, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842608603, "dur":1910, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":5, "ts":1658405842610535, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":5, "ts":1658405842610562, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842610596, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842610601, "dur":2147, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":5, "ts":1658405842612778, "dur":38, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842612816, "dur":1100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842613923, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842616128, "dur":76651, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842692805, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842692830, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842692869, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842692877, "dur":39819, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842732726, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842732753, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842732799, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842732809, "dur":111705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842844548, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842844573, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842844610, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842844616, "dur":135869, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842980507, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405842980528, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842980565, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405842980571, "dur":59056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843039653, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843039677, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843039719, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843039728, "dur":50352, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843090112, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843090138, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843090186, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843090196, "dur":24255, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843114477, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843114506, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843114544, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843114552, "dur":28530, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843143107, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843143135, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843143172, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843143179, "dur":131227, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843274430, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843274454, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843274492, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843274501, "dur":104929, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843379454, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843379475, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843379515, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843379524, "dur":38479, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843418028, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843418053, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843418096, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1658405843418105, "dur":278586, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1658405843696713, "dur":154821, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842529088, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842529089, "dur":3259, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842532358, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1658405842532413, "dur":149, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842532568, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842605913, "dur":2001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":6, "ts":1658405842607945, "dur":34, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1658405842607979, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608018, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608026, "dur":856, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608908, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608933, "dur":29, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608969, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842608997, "dur":3270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1658405842612293, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842612320, "dur":1575, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842613902, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842614603, "dur":60270, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842674899, "dur":31, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842674930, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842674968, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842674977, "dur":193538, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842868544, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842868568, "dur":4083, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842878379, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842878395, "dur":44715, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842923132, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842923150, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842923189, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842923196, "dur":48823, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842972052, "dur":29, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405842972081, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842972125, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405842972134, "dur":48967, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843021133, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843021157, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843021200, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843021208, "dur":41466, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843062698, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843062720, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843062757, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843062764, "dur":104757, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843167545, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843167567, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843167630, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843167640, "dur":32623, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843200290, "dur":290957, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843491248, "dur":64, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843491322, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843491332, "dur":1314, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843492671, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843492691, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843492751, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843492760, "dur":42729, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843535515, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843535535, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843535572, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1658405843535580, "dur":313430, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":6, "ts":1658405843849038, "dur":2583, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842529137, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842529138, "dur":3231, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842532370, "dur":36, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1658405842532406, "dur":178, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842532591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842606197, "dur":2868, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":7, "ts":1658405842609089, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842609118, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842609171, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842610136, "dur":2063, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842612226, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842612267, "dur":1599, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842613879, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842614519, "dur":229382, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842843925, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842843948, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842843983, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842843990, "dur":43115, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842887130, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842887154, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842887196, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842887206, "dur":57821, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842945051, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842945074, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842945121, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842945130, "dur":27256, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842972408, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405842972429, "dur":323, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842972759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405842972766, "dur":33934, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843006730, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843006753, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843006798, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843006807, "dur":45593, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843052428, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843052453, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843052493, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843052502, "dur":26396, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843078921, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843078945, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843078984, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843078991, "dur":35402, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843114422, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843114448, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843114484, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843114493, "dur":28397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843142913, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843142935, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843142972, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843142981, "dur":27072, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843170082, "dur":55070, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843225153, "dur":63, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843225226, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843225236, "dur":810, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.VisualScripting.State.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843226067, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843226088, "dur":28, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843226143, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843226150, "dur":135706, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843361881, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843361905, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843361944, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843361954, "dur":45663, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843407648, "dur":30, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843407678, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843407731, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1658405843407741, "dur":294891, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":7, "ts":1658405843702654, "dur":148898, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842529181, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842529182, "dur":3172, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842532358, "dur":41, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1658405842532399, "dur":48, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842532454, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842533754, "dur":74435, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":8, "ts":1658405842608213, "dur":26, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1658405842608240, "dur":73, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842608323, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842609489, "dur":2474, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1658405842612016, "dur":44, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1658405842612061, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842612122, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842614053, "dur":6514, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":8, "ts":1658405842620599, "dur":28, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842620627, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842620695, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842620729, "dur":86672, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842707426, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842707448, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842707485, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842707492, "dur":136373, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842843891, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842843916, "dur":32, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842843955, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842843961, "dur":29397, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842873384, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842873410, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842873446, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842873455, "dur":49295, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842922776, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842922799, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842922839, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842922847, "dur":44991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842967867, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842967892, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842967934, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842967943, "dur":26019, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842993991, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405842994015, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842994056, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405842994065, "dur":25225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843019319, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843019343, "dur":315, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843019665, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843019674, "dur":39730, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843059490, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843059516, "dur":6504, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843066032, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843066083, "dur":49133, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843115239, "dur":413, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843115653, "dur":281, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843116090, "dur":9, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843116108, "dur":41475, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843157611, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843157639, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843157681, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843157690, "dur":40225, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843197946, "dur":77763, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843275709, "dur":52, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843275770, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843275778, "dur":1448, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843277258, "dur":24, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843277282, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843277348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843277367, "dur":168944, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843446337, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843446360, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843446400, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843446408, "dur":132273, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843578708, "dur":149715, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843728434, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1658405843728442, "dur":120410, "ph":"X", "name": "CopyFiles",  "args": { "detail":"K:/Unity Projects/strategy/Turn-based-strategy/FirstStrategy_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":8, "ts":1658405843848895, "dur":2637, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1658405843854860, "dur":2414, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1658405843892447, "dur": 4414, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1658405843892161, "dur": 4755, "ph": "X", "name": "Write chrome-trace events", "args": {} },

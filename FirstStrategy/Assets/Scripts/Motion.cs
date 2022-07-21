@@ -94,6 +94,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.transform.position;
                         animator.SetBool("move", true);
@@ -153,6 +154,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.transform.position;
                         animator.SetBool("move", true);
@@ -185,6 +187,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.transform.position;
                         animator.SetBool("move", true);
@@ -245,6 +248,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.transform.position;
                         animator.SetBool("move", true);
@@ -274,6 +278,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.transform.position;
                         animator.SetBool("move", true);
@@ -335,6 +340,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.position;
                         animator.SetBool("move", true);
@@ -351,6 +357,7 @@ public class Motion : MonoBehaviour
                     turn = false;
                     if (turnAndMove)
                     {
+                        turn = true;
                         move = true;
                         agent.destination = obj.position;
                         animator.SetBool("move", true);
@@ -413,6 +420,7 @@ public class Motion : MonoBehaviour
                     if (turnAndMove)
                     {
                         move = true;
+                        turn = true;
                         agent.destination = obj.position;
                         animator.SetBool("move", true);
                         agent.updateRotation = true;

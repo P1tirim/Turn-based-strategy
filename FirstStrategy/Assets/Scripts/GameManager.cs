@@ -41,17 +41,18 @@ public class GameManager : MonoBehaviour
 
     //Next round
     public void NextPerson()
-    {
-        Global.first = true;
+    {      
         Person item = Global.listCharactersInGame[0];
         Global.listCharactersInGame.Remove(item);
         Global.listCharactersInGame.Add(item);
+        Global.first = true;
         Global.currentPerson.haveMove = true;
         Global.currentPerson.haveAttack = true;
         Global.currentPerson.healthBar.SetActive(false);
         Global.currentPerson = Global.listCharactersInGame[0];
         Global.currentPerson.healthBar.SetActive(true);
         Global.textOnMouse.gameObject.SetActive(false);
+        Debug.Log(Global.listCharactersInGame.Count);
         CalculateProbability();
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
@@ -98,21 +99,21 @@ public class GameManager : MonoBehaviour
         weapon.name = "sword";
         weapon.damage[0] = 1;
         weapon.damage[1] = 8;
-        weapon.hitProbability = 4;
+        weapon.hitProbability = 6;
         Global.listWeapon.Add(weapon);
 
         weapon = new Weapon();
         weapon.name = "bow";
         weapon.damage[0] = 1;
         weapon.damage[1] = 8;
-        weapon.hitProbability = 4;
+        weapon.hitProbability = 6;
         Global.listWeapon.Add(weapon);
 
         weapon = new Weapon();
         weapon.name = "special";
         weapon.damage[0] = 1;
         weapon.damage[1] = 12;
-        weapon.hitProbability = 4;
+        weapon.hitProbability = 6;
         Global.listWeapon.Add(weapon);
     }
 
