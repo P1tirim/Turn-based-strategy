@@ -64,6 +64,7 @@ public class Enemy : Motion
         character.initiative = initiative;
         character.initiativeInFight = Random.Range(1, 20) + initiative;
         Global.listCharactersInGame.Add(character);
+
     }
 
     // Update is called once per frame

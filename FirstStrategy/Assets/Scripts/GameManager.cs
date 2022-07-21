@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public static class Global
@@ -13,16 +14,21 @@ public static class Global
     public static Person currentPerson;
     public static GameObject[,] cells = new GameObject[5, 5];
     public static bool first = true;
+    public static TMP_Text textOnMouse;
 }
 public class GameManager : MonoBehaviour
 {
     public GameObject cells;
     Cells linkCells;
+    public TMP_Text textOnMouse;
+    public GameObject canvas;
 
     // Start is called before the first frame update
     void Start()
     {
         linkCells = cells.GetComponent<Cells>();
+        Global.textOnMouse = textOnMouse;
+        textOnMouse.gameObject.SetActive(false);
         CreateWeapons();
         CreateArmor();
     }
@@ -30,7 +36,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     //Next round
@@ -45,6 +51,8 @@ public class GameManager : MonoBehaviour
         Global.currentPerson.healthBar.SetActive(false);
         Global.currentPerson = Global.listCharactersInGame[0];
         Global.currentPerson.healthBar.SetActive(true);
+        Global.textOnMouse.gameObject.SetActive(false);
+        CalculateProbability();
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
     }
 
@@ -65,7 +73,21 @@ public class GameManager : MonoBehaviour
         }
         Global.currentPerson = Global.listCharactersInGame[0];
         Global.currentPerson.healthBar.SetActive(true);
+        CalculateProbability();
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);
+    }
+
+    //calcuate probability the attack
+    void CalculateProbability()
+    {
+        for (int ii = 0; ii < Global.listCharactersInGame.Count; ii++)
+        {
+            if (Global.listCharactersInGame[ii].obj.tag == "Enemy")
+            {
+                float prob = (20 - Global.listCharactersInGame[ii].armor.armorClass + Global.currentPerson.weapon.hitProbability) / 20f * 100f;
+                Global.listCharactersInGame[ii].probabilityOnHit = prob;
+            }
+        }
     }
 
     void CreateWeapons()
@@ -79,12 +101,14 @@ public class GameManager : MonoBehaviour
         weapon.hitProbability = 4;
         Global.listWeapon.Add(weapon);
 
+        weapon = new Weapon();
         weapon.name = "bow";
         weapon.damage[0] = 1;
         weapon.damage[1] = 8;
         weapon.hitProbability = 4;
         Global.listWeapon.Add(weapon);
 
+        weapon = new Weapon();
         weapon.name = "special";
         weapon.damage[0] = 1;
         weapon.damage[1] = 12;
@@ -101,11 +125,13 @@ public class GameManager : MonoBehaviour
         armor.haveShield = true;
         Global.listArmor.Add(armor);
 
+        armor = new Armor();
         armor.name = "leather";
         armor.armorClass = 15;
         armor.haveShield = false;
         Global.listArmor.Add(armor);
 
+        armor = new Armor();
         armor.name = "none";
         armor.armorClass = 14;
         armor.haveShield = false;
@@ -127,6 +153,7 @@ public class Person
     public int rangeAttack;
     public int initiative;
     public int initiativeInFight;
+    public float probabilityOnHit;
     public bool haveMove = true;
     public bool haveAttack = true;
 }

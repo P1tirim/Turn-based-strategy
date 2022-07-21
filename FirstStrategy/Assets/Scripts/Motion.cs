@@ -522,12 +522,17 @@ public class Motion : MonoBehaviour
             if (Global.listCharactersInGame[i].currentCell.name == obj.parent.name)
             {
                 int hit = Random.Range(1, 20);
-                if (hit == 1) break;
+                if (hit == 1)
+                {
+                    StartCoroutine(waitTakeDamage(i, linkCells));
+                }
                 if(hit + Global.currentPerson.weapon.hitProbability >= Global.listCharactersInGame[i].armor.armorClass)
                 {
                     int damage = Random.Range(Global.currentPerson.weapon.damage[0], Global.currentPerson.weapon.damage[1]);
                     if (hit == 20) damage += Global.currentPerson.weapon.damage[1];
                     Global.listCharactersInGame[i].healthCurrent -= damage;
+                    Global.textOnMouse.text = damage.ToString();
+                    Global.textOnMouse.color = Color.red;
                     if (Global.listCharactersInGame[i].healthCurrent <= 0)
                     {
                         int index = i;
@@ -546,6 +551,7 @@ public class Motion : MonoBehaviour
                 }
                 else
                 {
+                    Global.textOnMouse.text = "miss";
                     Global.currentPerson.haveAttack = false;
                     Global.first = true;
                     Global.listCharactersInGame[i].healthBar.SetActive(false);
@@ -573,8 +579,8 @@ public class Motion : MonoBehaviour
 
     IEnumerator waitTakeDamage(int index ,Cells linkCells)
     {
-        yield return new WaitForSeconds(1);
         Global.currentPerson.haveAttack = false;
+        yield return new WaitForSeconds(1);      
         Global.first = true;
         Global.listCharactersInGame[index].healthBar.SetActive(false);
         linkCells.SpawnParticle(Global.currentPerson.currentPositionX, Global.currentPerson.currentPositionY);

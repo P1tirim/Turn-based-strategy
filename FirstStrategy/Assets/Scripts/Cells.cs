@@ -152,6 +152,7 @@ public class Cells : MonoBehaviour
                         if (Global.listCharactersInGame[i].currentCell == cell)
                         {
                             Global.listCharactersInGame[i].healthBar.SetActive(false);
+                            Global.textOnMouse.gameObject.SetActive(false);
                             break;
                         }
                     }
@@ -175,6 +176,16 @@ public class Cells : MonoBehaviour
                     if (Global.listCharactersInGame[i].currentCell == cell)
                     {
                         Global.listCharactersInGame[i].healthBar.SetActive(true);
+                        if (Global.currentPerson.haveAttack)
+                        {
+                            Global.textOnMouse.gameObject.SetActive(true);
+                            Vector3 pos = hit.transform.position;
+                            pos.y = 5;
+                            pos.z = -5;
+                            Global.textOnMouse.transform.position = pos;
+                            Global.textOnMouse.color = Color.white;
+                            Global.textOnMouse.text = Global.listCharactersInGame[i].probabilityOnHit.ToString() + "%";
+                        }
                         break;
                     }
                 }
